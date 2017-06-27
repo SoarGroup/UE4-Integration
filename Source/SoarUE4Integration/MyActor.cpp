@@ -7,8 +7,17 @@
 
 using namespace std;
 using namespace sml;
-// Sets default values
 
+
+// Sets default values
+AMyActor::AMyActor()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+	
+}
+
+//Puts output from cout to Unreal Output Log
 class LStream : public std::stringbuf {
 protected:
 	int sync() {
@@ -17,14 +26,6 @@ protected:
 		return std::stringbuf::sync();
 	}
 };
-
-AMyActor::AMyActor()
-{
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
-}
-
 // Called when the game starts or when spawned
 void AMyActor::BeginPlay()
 {
