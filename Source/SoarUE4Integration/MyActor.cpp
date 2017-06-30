@@ -1,9 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MyActor.h"
+
+#include "Soar_Agent.h"
+#include "Soar_Kernel.h"
+
 #include <iostream>
-#include "sml_Client.h"
 #include <sstream>
+
 
 using namespace std;
 using namespace sml;
@@ -32,14 +36,16 @@ void AMyActor::BeginPlay()
 	LStream Stream;
 	cout.rdbuf(&Stream);
 	cout << "some message" << endl;
-	Kernel *k = Kernel::CreateKernelInNewThread();
-	Agent *a = k->CreateAgent("soar");
-	cout << a->ExecuteCommandLine("echo Hello World") << endl;
+
+  Soar_Kernel kernel;
+  Soar_Agent agent(kernel, "soar");
+	//Kernel *k = Kernel::CreateKernelInNewThread();
+	//Agent *a = k->CreateAgent("soar");
+	cout << agent->ExecuteCommandLine("echo Hello World") << endl;
 
 	string dummy;
 	cin >> dummy;
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
