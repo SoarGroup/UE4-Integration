@@ -23,12 +23,12 @@ AMyText::AMyText()
 // Called when the game starts or when spawned
 void AMyText::BeginPlay()
 {
-  Soar_Kernel kernel;
-  Soar_Agent agent(kernel, "soar");
+  Soar_Kernel::Pointer kernel = Soar_Kernel::Create();
+  Soar_Agent::Pointer agent = Soar_Agent::Create(kernel, "soar");
 	//Kernel *k = Kernel::CreateKernelInNewThread();
 	//Agent *a = k->CreateAgent("soar");
 
-	MyText->SetText(agent->ExecuteCommandLine("echo Hello World"));
+	MyText->SetText((*agent)->ExecuteCommandLine("echo Hello World"));
 	
 	
 	Super::BeginPlay();
