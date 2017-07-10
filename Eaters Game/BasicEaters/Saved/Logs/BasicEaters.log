@@ -1,0 +1,1248 @@
+﻿Log file open, 07/09/17 20:55:10
+LogInit:Display: Running engine for game: BasicEaters
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(-1569514396) SRandInit(-1569514396).
+LogTaskGraph: Started task graph with 5 named threads and 6 total threads with 1 sets of task threads.
+LogStats: Stats thread started at 0.091224
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Build: ++UE4+Release-4.16-CL-3514769
+LogInit: Engine Version: 4.16.2-3514769+++UE4+Release-4.16
+LogInit: Compatible Engine Version: 4.16.0-3452394+++UE4+Release-4.16
+LogInit: Net CL: 3452394
+LogDevObjectVersion: Number of dev versions registered: 16
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 9
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 17
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 23
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 15
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 4
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 1
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 3
+LogInit: Compiled (64-bit): Jun 29 2017 02:03:24
+LogInit: Compiled with Visual C++: 19.00.24215.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.16
+LogInit: Command line: -EpicPortal 
+LogInit: Base directory: D:/Program Files (x86)/UE_4.16/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2017.07.10-00.55.11:020][  0]LogInit: Selected Device Profile: [Windows]
+[2017.07.10-00.55.11:020][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2017.07.10-00.55.11:042][  0]LogInit: Computer: DESKTOP-87LHRMB
+[2017.07.10-00.55.11:042][  0]LogInit: User: yugch
+[2017.07.10-00.55.11:042][  0]LogInit: CPU Page size=4096, Cores=2
+[2017.07.10-00.55.11:042][  0]LogInit: High frequency timer resolution =2.435873 MHz
+[2017.07.10-00.55.11:042][  0]LogMemory: Memory total: Physical=7.9GB (8GB approx)
+[2017.07.10-00.55.11:042][  0]LogMemory: Platform Memory Stats for Windows
+[2017.07.10-00.55.11:042][  0]LogMemory: Process Physical Memory: 272.77 MB used, 272.77 MB peak
+[2017.07.10-00.55.11:042][  0]LogMemory: Process Virtual Memory: 266.59 MB used, 266.59 MB peak
+[2017.07.10-00.55.11:042][  0]LogMemory: Physical Memory: 5829.97 MB used,  2243.30 MB free, 8073.27 MB total
+[2017.07.10-00.55.11:042][  0]LogMemory: Virtual Memory: 642.29 MB used,  2243.30 MB free, 134217728.00 MB total
+[2017.07.10-00.55.11:135][  0]LogInit: Using OS detected language (en-US).
+[2017.07.10-00.55.11:135][  0]LogInit: Using OS detected locale (en-US).
+[2017.07.10-00.55.11:140][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2017.07.10-00.55.12:458][  0]LogD3D11RHI: D3D11 adapters:
+[2017.07.10-00.55.12:463][  0]LogD3D11RHI:    0. 'Intel(R) HD Graphics 4000' (Feature Level 11_0)
+[2017.07.10-00.55.12:463][  0]LogD3D11RHI:       32/0/1760 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x8086
+[2017.07.10-00.55.12:464][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2017.07.10-00.55.12:464][  0]LogD3D11RHI:       0/0/4036 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2017.07.10-00.55.12:464][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2017.07.10-00.55.12:470][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2017.07.10-00.55.12:470][  0]LogD3D11RHI:     GPU DeviceId: 0x166 (for the marketing name, search the web for "GPU Device Id")
+[2017.07.10-00.55.12:471][  0]LogWindows: EnumDisplayDevices:
+[2017.07.10-00.55.12:471][  0]LogWindows:    0. 'Intel(R) HD Graphics 4000' (P:1 D:1)
+[2017.07.10-00.55.12:471][  0]LogWindows:    1. 'Intel(R) HD Graphics 4000' (P:0 D:0)
+[2017.07.10-00.55.12:471][  0]LogWindows:    2. 'Intel(R) HD Graphics 4000' (P:0 D:0)
+[2017.07.10-00.55.12:471][  0]LogWindows: DebugString: FoundDriverCount:3 
+[2017.07.10-00.55.12:471][  0]LogD3D11RHI:     Adapter Name: Intel(R) HD Graphics 4000
+[2017.07.10-00.55.12:471][  0]LogD3D11RHI:   Driver Version: 10.18.10.4358 (internal:10.18.10.4358, unified:10.18.10.4358)
+[2017.07.10-00.55.12:471][  0]LogD3D11RHI:      Driver Date: 12-21-2015
+[2017.07.10-00.55.12:471][  0]LogRHI: Texture pool is 638 MB (70% of 912 MB)
+[2017.07.10-00.55.12:476][  0]LogD3D11RHI: Async texture creation enabled
+[2017.07.10-00.55.12:481][  0]LogD3D11RHI: GPU Timing Frequency: 12.500000 (Debug: 2 0)
+[2017.07.10-00.55.12:481][  0]LogShaderCompilers: Guid format shader working directory is -7 characters bigger than the processId version (C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Intermediate/Shaders/WorkingDirectory/11616/).
+[2017.07.10-00.55.12:482][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/yugch/AppData/Local/Temp/UnrealShaderWorkingDir/713ABD3A41A31ADF90C11B95A7BA3FE2/'.
+[2017.07.10-00.55.12:482][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2017.07.10-00.55.14:379][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2017.07.10-00.55.14:438][  0]LogTemp:Display: Loaded TP MacClientTargetPlatform
+[2017.07.10-00.55.14:499][  0]LogTemp:Display: Loaded TP MacNoEditorTargetPlatform
+[2017.07.10-00.55.14:557][  0]LogTemp:Display: Loaded TP MacServerTargetPlatform
+[2017.07.10-00.55.14:618][  0]LogTemp:Display: Loaded TP MacTargetPlatform
+[2017.07.10-00.55.14:677][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2017.07.10-00.55.14:735][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2017.07.10-00.55.14:793][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2017.07.10-00.55.14:843][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2017.07.10-00.55.14:901][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2017.07.10-00.55.14:958][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2017.07.10-00.55.15:015][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2017.07.10-00.55.15:073][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2017.07.10-00.55.15:134][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2017.07.10-00.55.15:190][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2017.07.10-00.55.15:302][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2017.07.10-00.55.15:302][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2017.07.10-00.55.15:351][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2017.07.10-00.55.15:457][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2017.07.10-00.55.15:493][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
+[2017.07.10-00.55.15:551][  0]LogTemp:Display: Loaded TP LinuxClientTargetPlatform
+[2017.07.10-00.55.15:610][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2017.07.10-00.55.15:668][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2017.07.10-00.55.15:726][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2017.07.10-00.55.15:726][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2017.07.10-00.55.16:277][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2017.07.10-00.55.16:389][  0]LogDerivedDataCache: Loaded boot cache 0.11s 90MB C:/Users/yugch/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc.
+[2017.07.10-00.55.16:389][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/yugch/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc
+[2017.07.10-00.55.16:389][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/yugch/Documents/Unreal Projects/BasicEaters/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.07.10-00.55.16:389][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2017.07.10-00.55.16:389][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/yugch/Documents/Unreal Projects/BasicEaters/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2017.07.10-00.55.16:389][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2017.07.10-00.55.16:409][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2017.07.10-00.55.16:422][  0]LogDerivedDataCache: Using Local data cache path C:/Users/yugch/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2017.07.10-00.55.16:435][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2017.07.10-00.55.16:435][  0]LogSlate: Using Freetype 2.6.0
+[2017.07.10-00.55.16:436][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2017.07.10-00.55.16:436][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2017.07.10-00.55.16:893][  0]LogInit: Selected Device Profile: [Windows]
+[2017.07.10-00.55.17:015][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2017.07.10-00.55.17:215][  0]LogMeshUtilities: Using QuadricMeshReduction for automatic static mesh reduction
+[2017.07.10-00.55.17:265][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2017.07.10-00.55.17:321][  0]LogMeshUtilities: Using SimplygonSwarm for distributed automatic mesh merging
+[2017.07.10-00.55.17:321][  0]LogMeshUtilities: No automatic skeletal mesh reduction module available
+[2017.07.10-00.55.17:321][  0]LogMeshUtilities: No automatic mesh merging module available
+[2017.07.10-00.55.18:049][  0]LogNetVersion: BasicEaters , NetCL: 3452394, EngineNetVer: 2, GameNetVer: 0 (Checksum: 2317158986)
+[2017.07.10-00.55.18:121][  0]LogAssetRegistry: FAssetRegistry took 0.0267 seconds to start up
+[2017.07.10-00.55.18:207][  0]LogPackageLocalizationCache: Processed 4 localized package path(s) for 2 prioritized culture(s) in 0.052720 seconds
+[2017.07.10-00.55.18:214][  0]LogUObjectArray: 34194 objects as part of root set at end of initial load.
+[2017.07.10-00.55.18:214][  0]LogUObjectAllocator: 7260416 out of 0 bytes used by permanent object pool.
+[2017.07.10-00.55.18:214][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2017.07.10-00.55.18:291][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2017.07.10-00.55.21:188][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2017.07.10-00.55.21:236][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2017.07.10-00.55.21:926][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2017.07.10-00.55.22:551][  0]SourceControl: Info Source control is disabled
+[2017.07.10-00.55.22:608][  0]SourceControl: Info Source control is disabled
+[2017.07.10-00.55.22:663][  0]SourceControl: Info Source control is disabled
+[2017.07.10-00.55.22:717][  0]SourceControl: Info Source control is disabled
+[2017.07.10-00.55.23:454][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2017.07.10-00.55.24:128][  0]LogEngine: Initializing Engine...
+[2017.07.10-00.55.24:128][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2017.07.10-00.55.24:388][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2017.07.10-00.55.24:388][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2017.07.10-00.55.24:557][  0]LogAIModule: Creating AISystem for world Untitled
+[2017.07.10-00.55.24:568][  0]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-00.55.24:595][  0]LogInit: FAudioDevice initialized.
+[2017.07.10-00.55.24:656][  0]LogDerivedDataCache: Saved boot cache 0.06s 90MB C:/Users/yugch/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc.
+[2017.07.10-00.55.24:668][  0]LogInit: Texture streaming: Enabled
+[2017.07.10-00.55.24:783][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2017.07.10-00.55.25:020][  0]LogInit: Transaction tracking system initialized
+[2017.07.10-00.55.25:374][  0]BlueprintLog: New page: Editor Load
+[2017.07.10-00.55.26:398][  0]LocalizationService: Info Localization service is disabled
+[2017.07.10-00.55.27:426][  0]LogConsoleResponse:Display: 
+[2017.07.10-00.55.27:697][  0]LogCook:Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2017.07.10-00.55.27:697][  0]LogCook:Display: Mobile HDR setting 1
+[2017.07.10-00.55.28:373][  0]LogFileCache: Scanning file cache for directory 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/' took 0.02s
+[2017.07.10-00.55.29:081][  0]SourceControl: Info Source control is disabled
+[2017.07.10-00.55.29:082][  0]Cmd: MAP LOAD FILE="C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2017.07.10-00.55.29:083][  0]LightingResults: New page: Lighting Build
+[2017.07.10-00.55.29:133][  0]MapCheck: New page: Map Check
+[2017.07.10-00.55.29:133][  0]LightingResults: New page: Lighting Build
+[2017.07.10-00.55.29:886][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-00.55.29:907][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2017.07.10-00.55.29:972][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2017.07.10-00.55.30:144][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 172.345ms to complete.
+[2017.07.10-00.55.30:144][  0]LogFileHelpers: Loading map 'Minimal_Default' took 1.062
+[2017.07.10-00.55.30:218][  0]LogWindowsTextInputMethodSystem:Display: IME system now deactivated.
+[2017.07.10-00.55.30:584][  0]LogCollectionManager: Loaded 0 collections in 0.002918 seconds
+[2017.07.10-00.55.30:740][  0]LogFileCache: Scanning file cache for directory 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Collections/' took 0.02s
+[2017.07.10-00.55.30:740][  0]LogFileCache: Scanning file cache for directory 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/Developers/yugch/Collections/' took 0.01s
+[2017.07.10-00.55.30:740][  0]LogFileCache: Scanning file cache for directory 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/Collections/' took 0.00s
+[2017.07.10-00.55.30:740][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000002 seconds
+[2017.07.10-00.55.30:776][  0]LogContentBrowser: Native class hierarchy populated in 0.0360 seconds. Added 2330 classes and 493 folders.
+[2017.07.10-00.55.31:006][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0033 seconds. Added 0 classes and 0 folders.
+[2017.07.10-00.55.32:283][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0030 seconds. Added 0 classes and 0 folders.
+[2017.07.10-00.55.32:389][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0027 seconds. Added 1 classes and 2 folders.
+[2017.07.10-00.55.32:460][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2017.07.10-00.55.32:468][  0]LogSlate: Took 0.000348 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.07.10-00.55.32:472][  0]LogSlate: Took 0.000364 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2017.07.10-00.55.32:504][  0]LogSlate: Took 0.021827 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2017.07.10-00.55.32:676][  0]LogRenderer: Reallocating scene render targets to support 856x372 NumSamples 1 (Frame:1).
+[2017.07.10-00.55.33:665][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2017.07.10-00.55.33:745][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0021 seconds. Added 1 classes and 2 folders.
+[2017.07.10-00.55.33:746][  0]LogLoad: (Engine Initialization) Total time: 25.13 seconds
+[2017.07.10-00.55.33:746][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.12 seconds
+[2017.07.10-00.55.33:746][  0]LogExternalProfiler: Found external profiler: VSPerf
+[2017.07.10-00.55.33:746][  0]LogExternalProfiler: Using external profiler: VSPerf
+[2017.07.10-00.55.33:758][  0]LogOcInput: OculusInput pre-init called
+[2017.07.10-00.55.33:758][  0]LogHMD: Starting GearVRController plugin
+[2017.07.10-00.55.33:776][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2017.07.10-00.55.34:013][  0]LogSlate: Took 0.000450 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.07.10-00.55.34:035][  1]LogAssetRegistry: Asset discovery search completed in 15.9359 seconds
+[2017.07.10-00.55.34:038][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2017.07.10-00.55.34:038][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000049 seconds (updated 0 objects)
+[2017.07.10-01.03.58:165][300]Cmd: DELETE
+[2017.07.10-01.03.58:166][300]Cmd: ACTOR DELETE
+[2017.07.10-01.03.58:172][300]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.03.58:172][300]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.03.58:172][300]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.03.58:172][300]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.03.58:172][300]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.03.58:172][300]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.03.58:203][300]LogEditorActor: Deleted 6 Actors (0.037 secs)
+[2017.07.10-01.05.44:057][383]LogSlate: Took 0.000443 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.07.10-01.05.53:068][674]LogSlate: Took 0.000419 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.07.10-01.05.53:582][674]LogSavePackage: Save=397.51ms
+[2017.07.10-01.05.53:582][674]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_Auto14DE23C1C4C522F4BE579F188819AC9F1.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto1.umap'
+[2017.07.10-01.05.53:586][674]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto1.umap
+[2017.07.10-01.05.53:594][674]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.466
+[2017.07.10-01.05.53:594][674]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.466
+[2017.07.10-01.06.02:996][ 97]LogSlate: Took 0.000530 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2017.07.10-01.06.43:491][255]LogActorFactory: Actor Factory created Plane
+[2017.07.10-01.06.44:784][289]LogActorFactory: Actor Factory created Plane
+[2017.07.10-01.07.37:703][624]LogActorFactory: Actor Factory created Cube
+[2017.07.10-01.07.41:368][713]LogActorFactory: Actor Factory created Cube
+[2017.07.10-01.07.43:593][768]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.07.46:358][823]LogSlate: Took 0.000450 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2017.07.10-01.09.24:578][ 33]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.10.59:053][194]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.11.40:478][307]MapCheck: New page: Map Check
+[2017.07.10-01.11.40:605][307]LightingResults: New page: Lighting Build - Jul 9, 2017, 5:11:40 PM
+[2017.07.10-01.11.40:931][307]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2017.07.10-01.11.41:177][307]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2017.07.10-01.11.41:500][307]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2017.07.10-01.11.43:597][307]LogSwarmInterface:Error: [TryOpenConnection] Waiting for the agent to start up ...
+[2017.07.10-01.11.43:605][307]LogSwarmInterface:Error: System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:8008
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.AsyncProcessRequest(IClientChannelSinkStack sinkStack, IMessage msg, ITransportHeaders headers, Stream stream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessMessage(IMessage msg, IMessageSink replySink)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at NSwarm.IAgentInterfaceWrapper.MethodDelegate.EndInvoke(Hashtable& OutParameters, IAsyncResult result)
+   at NSwarm.FSwarmInterface.TryOpenConnection(FConnectionCallback CallbackFunc, IntPtr CallbackData, ELogFlags LoggingFlags)
+[2017.07.10-01.11.48:660][307]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2017.07.10-01.11.48:661][307]LogSwarmInterface: [TryOpenConnection] Local Process ID is 11616
+[2017.07.10-01.11.53:486][307]LogStaticLightingSystem:Warning: No importance volume found, so the scene bounding box was used.  You can optimize your scene's quality and lighting build times by adding importance volumes.
+[2017.07.10-01.11.53:492][307]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2017.07.10-01.11.53:492][307]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2017.07.10-01.11.53:492][307]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2017.07.10-01.11.53:492][307]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2017.07.10-01.11.53:492][307]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2017.07.10-01.11.53:877][307]LogEditorBuildUtils: Build time 0:13
+[2017.07.10-01.11.53:884][307]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer MaterialInstanceDynamic_2, compiling. 
+[2017.07.10-01.11.53:995][307]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer MaterialInstanceDynamic_2, compiling. 
+[2017.07.10-01.11.54:021][308]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer M_Basic_Floor, compiling. 
+[2017.07.10-01.11.54:030][308]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer M_Basic_Floor, compiling. 
+[2017.07.10-01.11.54:101][309]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer BasicShapeMaterial, compiling. 
+[2017.07.10-01.11.54:110][309]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer BasicShapeMaterial, compiling. 
+[2017.07.10-01.11.54:137][310]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer WorldGridMaterial, compiling. Is special engine material.
+[2017.07.10-01.11.54:166][310]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer WorldGridMaterial, compiling. Is special engine material.
+[2017.07.10-01.12.02:943][387]Job is a success!
+[2017.07.10-01.12.03:433][388]LogTexture:Display: Building textures: SkyOcclusion1_1 (AutoDXT, 128X64)
+[2017.07.10-01.12.03:433][388]LogTexture:Display: Building textures: HQ_Lightmap1_1 (AutoDXT, 128X128)
+[2017.07.10-01.12.03:433][388]LogTexture:Display: Building textures: LQ_Lightmap_1_1 (DXT1, 128X128)
+[2017.07.10-01.12.03:433][388]LogTexture:Display: Building textures: SkyOcclusion1_2 (AutoDXT, 64X32)
+[2017.07.10-01.12.03:433][388]LogTexture:Display: Building textures: HQ_Lightmap1_2 (AutoDXT, 64X64)
+[2017.07.10-01.12.03:433][388]LogTexture:Display: Building textures: LQ_Lightmap_1_2 (DXT1, 64X64)
+[2017.07.10-01.12.03:517][388]LogTexture:Display: Building textures: ShadowMapTexture2D_2 (G8, 128X64)
+[2017.07.10-01.12.03:517][388]LogTexture:Display: Building textures: ShadowMapTexture2D_3 (G8, 32X32)
+[2017.07.10-01.12.03:573][388]Lightmass on DESKTOP-87LHRMB: 3.11 sec total, 1.92 sec importing, 63 ms setup, 150 ms photons, 953 ms processing, 0 ms extra exporting [3/3 mappings]. Threads: 3.76 sec total, 694 ms processing.
+[2017.07.10-01.12.03:624][388]LogStaticLightingSystem: Illumination: 22.9 sec (105 ms encoding lightmaps, 170 ms encoding shadowmaps)
+[2017.07.10-01.12.03:624][388]LogStaticLightingSystem: Lightmap texture memory:  0.1 MB (0.1 MB streaming, 0.0 MB non-streaming), 4 textures
+[2017.07.10-01.12.03:624][388]LogStaticLightingSystem: Shadowmap texture memory: 0.0 MB (0.0 MB streaming, 0.0 MB non-streaming), 2 textures
+[2017.07.10-01.12.04:281][388]DumpUnbuiltLightIteractions
+[2017.07.10-01.12.04:281][388]Lights with unbuilt interactions: 0
+[2017.07.10-01.12.04:281][388]
+[2017.07.10-01.12.04:281][388]Primitives with unbuilt interactions: 0
+[2017.07.10-01.12.04:294][389]Cmd: MAP CHECK NOTIFYRESULTS
+[2017.07.10-01.12.04:294][389]MapCheck: New page: Minimal_Default - Jul 9, 2017, 5:12:04 PM
+[2017.07.10-01.12.04:760][389]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 466.575ms to complete.
+[2017.07.10-01.14.01:045][468]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.14.01:769][483]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.14.02:558][500]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.15.25:389][485]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.15.26:156][502]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (Cube)
+[2017.07.10-01.15.31:736][816]Cmd: CAMERA SNAP
+[2017.07.10-01.15.31:736][816]Snapped camera to the first selected object.
+[2017.07.10-01.15.35:559][915]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2017.07.10-01.15.36:167][930]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (Cube)
+[2017.07.10-01.16.00:507][373]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2017.07.10-01.16.29:488][ 14]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.16.31:028][ 50]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Wall)
+[2017.07.10-01.16.42:988][427]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.16.47:532][646]MapCheck: New page: Map Check
+[2017.07.10-01.16.47:545][646]LightingResults: New page: Lighting Build - Jul 9, 2017, 5:16:47 PM
+[2017.07.10-01.16.47:557][646]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2017.07.10-01.16.47:560][646]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2017.07.10-01.16.47:560][646]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2017.07.10-01.16.47:562][646]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2017.07.10-01.16.47:562][646]LogSwarmInterface: [TryOpenConnection] Local Process ID is 11616
+[2017.07.10-01.16.52:077][646]LogStaticLightingSystem:Warning: No importance volume found, so the scene bounding box was used.  You can optimize your scene's quality and lighting build times by adding importance volumes.
+[2017.07.10-01.16.52:078][646]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2017.07.10-01.16.52:078][646]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2017.07.10-01.16.52:078][646]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2017.07.10-01.16.52:078][646]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2017.07.10-01.16.52:078][646]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2017.07.10-01.16.52:281][646]LogEditorBuildUtils: Build time 0:04
+[2017.07.10-01.16.52:293][646]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer M_Basic_Wall, compiling. 
+[2017.07.10-01.16.52:301][646]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer M_Basic_Wall, compiling. 
+[2017.07.10-01.16.55:806][655]Job is a success!
+[2017.07.10-01.16.56:296][656]LogTexture:Display: Building textures: SkyOcclusion0_1 (AutoDXT, 128X64)
+[2017.07.10-01.16.56:296][656]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT, 128X128)
+[2017.07.10-01.16.56:296][656]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1, 128X128)
+[2017.07.10-01.16.56:296][656]LogTexture:Display: Building textures: SkyOcclusion0_2 (AutoDXT, 64X32)
+[2017.07.10-01.16.56:297][656]LogTexture:Display: Building textures: HQ_Lightmap0_2 (AutoDXT, 64X64)
+[2017.07.10-01.16.56:297][656]LogTexture:Display: Building textures: LQ_Lightmap_0_2 (DXT1, 64X64)
+[2017.07.10-01.16.56:297][656]LogTexture:Display: Building textures: ShadowMapTexture2D_4 (G8, 128X64)
+[2017.07.10-01.16.56:297][656]LogTexture:Display: Building textures: ShadowMapTexture2D_5 (G8, 32X32)
+[2017.07.10-01.16.56:337][656]Lightmass on DESKTOP-87LHRMB: 1.62 sec total, 634 ms importing, 31 ms setup, 116 ms photons, 832 ms processing, 0 ms extra exporting [3/3 mappings]. Threads: 3.29 sec total, 348 ms processing.
+[2017.07.10-01.16.56:340][656]LogStaticLightingSystem: Illumination: 8.45 sec (32 ms encoding lightmaps, 85 ms encoding shadowmaps)
+[2017.07.10-01.16.56:340][656]LogStaticLightingSystem: Lightmap texture memory:  0.1 MB (0.1 MB streaming, 0.0 MB non-streaming), 4 textures
+[2017.07.10-01.16.56:340][656]LogStaticLightingSystem: Shadowmap texture memory: 0.0 MB (0.0 MB streaming, 0.0 MB non-streaming), 2 textures
+[2017.07.10-01.16.57:082][656]DumpUnbuiltLightIteractions
+[2017.07.10-01.16.57:082][656]Lights with unbuilt interactions: 0
+[2017.07.10-01.16.57:082][656]
+[2017.07.10-01.16.57:082][656]Primitives with unbuilt interactions: 0
+[2017.07.10-01.16.57:103][657]Cmd: MAP CHECK NOTIFYRESULTS
+[2017.07.10-01.16.57:103][657]MapCheck: New page: Minimal_Default - Jul 9, 2017, 5:16:57 PM
+[2017.07.10-01.16.57:198][657]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 95.221ms to complete.
+[2017.07.10-01.17.12:853][703]LogSavePackage: Save=211.02ms
+[2017.07.10-01.17.12:853][703]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_Auto28B28F61D4CB466B3A028618F80275137.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto2.umap'
+[2017.07.10-01.17.12:857][703]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto2.umap
+[2017.07.10-01.17.12:859][703]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.269
+[2017.07.10-01.17.12:859][703]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.269
+[2017.07.10-01.17.13:088][703]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/StarterContent/Maps/Minimal_Default_BuiltData] ([1] browsable assets)...
+[2017.07.10-01.17.13:089][703]OBJ SavePackage: Finished generating thumbnails for package [/Game/StarterContent/Maps/Minimal_Default_BuiltData]
+[2017.07.10-01.17.13:143][703]LogSavePackage: Save=25.04ms
+[2017.07.10-01.17.13:143][703]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_BuiltData_Auto2B77003FA4688446B6E5EA2A47DA91258.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_BuiltData_Auto2.uasset'
+[2017.07.10-01.17.13:145][703]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_BuiltData_Auto2.uasset
+[2017.07.10-01.17.13:145][703]LogFileHelpers: Auto-saving content packages took 0.284
+[2017.07.10-01.22.00:121][614]LogMaterial: Missing cached shader map for material LayerVisMaterial, compiling. 
+[2017.07.10-01.22.00:214][614]LogMaterial: Missing cached shader map for material SelectBrushMaterial, compiling. 
+[2017.07.10-01.22.00:290][614]LogMaterial: Missing cached shader map for material SelectBrushMaterial, compiling. 
+[2017.07.10-01.22.00:397][614]LogMaterial: Missing cached shader map for material MaskBrushMaterial, compiling. 
+[2017.07.10-01.22.00:525][614]LogMaterial: Missing cached shader map for material LandscapeLayerUsageMaterial, compiling. 
+[2017.07.10-01.22.00:796][614]LogMaterial: Missing cached shader map for material CircleBrushMaterial, compiling. 
+[2017.07.10-01.22.00:848][614]LogMaterial: Missing cached shader map for material CircleBrushMaterial, compiling. 
+[2017.07.10-01.22.00:903][614]LogMaterial: Missing cached shader map for material CircleBrushMaterial, compiling. 
+[2017.07.10-01.22.00:971][614]LogMaterial: Missing cached shader map for material CircleBrushMaterial, compiling. 
+[2017.07.10-01.22.01:052][614]LogMaterial: Missing cached shader map for material AlphaBrushMaterial, compiling. 
+[2017.07.10-01.22.01:122][614]LogMaterial: Missing cached shader map for material CircleBrushMaterial, compiling. 
+[2017.07.10-01.22.01:222][614]LogMaterial: Missing cached shader map for material MaskBrushMaterial, compiling. 
+[2017.07.10-01.22.01:353][614]LogTexture:Display: Building textures: Texture2D_2 (G8, 128X128)
+[2017.07.10-01.22.06:181][748]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Wall)
+[2017.07.10-01.22.08:247][793]Cmd: DELETE
+[2017.07.10-01.22.08:247][793]Cmd: ACTOR DELETE
+[2017.07.10-01.22.08:248][793]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.22.08:320][793]LogEditorActor: Deleted 1 Actors (0.073 secs)
+[2017.07.10-01.22.10:595][852]LogEditorViewport: Clicking on Actor (LMB): AtmosphericFog (Atmospheric Fog)
+[2017.07.10-01.22.16:235][984]Cmd: DELETE
+[2017.07.10-01.22.16:235][984]Cmd: ACTOR DELETE
+[2017.07.10-01.22.16:236][984]LogEditorActor: Deleted Actor: AtmosphericFog
+[2017.07.10-01.22.16:298][984]LogEditorActor: Deleted 1 Actors (0.063 secs)
+[2017.07.10-01.22.17:043][  4]LogEditorViewport: Clicking on Actor (LMB): AmbientSound (Starter_Background_Cue)
+[2017.07.10-01.22.17:819][ 16]Cmd: DELETE
+[2017.07.10-01.22.17:819][ 16]Cmd: ACTOR DELETE
+[2017.07.10-01.22.17:820][ 16]LogEditorActor: Deleted Actor: AmbientSound
+[2017.07.10-01.22.17:929][ 16]LogEditorActor: Deleted 1 Actors (0.110 secs)
+[2017.07.10-01.22.18:488][ 32]LogEditorViewport: Clicking on Actor (LMB): DirectionalLight (Light Source)
+[2017.07.10-01.22.18:901][ 39]Cmd: DELETE
+[2017.07.10-01.22.18:901][ 39]Cmd: ACTOR DELETE
+[2017.07.10-01.22.20:374][ 39]LogEditorActor: Deleted Actor: DirectionalLight
+[2017.07.10-01.22.20:420][ 39]LogEditorActor: Deleted 1 Actors (1.519 secs)
+[2017.07.10-01.22.21:533][ 71]LogEditorViewport: Clicking on Actor (LMB): SphereReflectionCapture (SphereReflectionCapture10)
+[2017.07.10-01.22.21:943][ 79]Cmd: DELETE
+[2017.07.10-01.22.21:943][ 79]Cmd: ACTOR DELETE
+[2017.07.10-01.22.21:944][ 79]LogEditorActor: Deleted Actor: SphereReflectionCapture
+[2017.07.10-01.22.22:020][ 79]LogEditorActor: Deleted 1 Actors (0.077 secs)
+[2017.07.10-01.22.23:144][112]LogEditorViewport: Clicking on Actor (LMB): SphereReflectionCapture (SphereReflectionCapture)
+[2017.07.10-01.22.23:746][126]Cmd: DELETE
+[2017.07.10-01.22.23:746][126]Cmd: ACTOR DELETE
+[2017.07.10-01.22.23:747][126]LogEditorActor: Deleted Actor: SphereReflectionCapture
+[2017.07.10-01.22.23:808][126]LogEditorActor: Deleted 1 Actors (0.061 secs)
+[2017.07.10-01.22.24:395][143]LogEditorViewport: Clicking on Actor (LMB): SkyLight (SkyLight)
+[2017.07.10-01.22.24:940][156]Cmd: DELETE
+[2017.07.10-01.22.24:940][156]Cmd: ACTOR DELETE
+[2017.07.10-01.22.24:941][156]LogEditorActor: Deleted Actor: SkyLight
+[2017.07.10-01.22.24:998][156]LogEditorActor: Deleted 1 Actors (0.057 secs)
+[2017.07.10-01.22.30:725][323]LogEditorActor: Deleted Actor: BP_Sky_Sphere_C
+[2017.07.10-01.22.30:782][323]LogEditorActor: Deleted 1 Actors (0.058 secs)
+[2017.07.10-01.22.34:325][413]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.22.34:388][413]LogEditorActor: Deleted 1 Actors (0.064 secs)
+[2017.07.10-01.22.35:596][446]LogEditorActor: Deleted Actor: PostProcessVolume
+[2017.07.10-01.22.35:664][446]LogEditorActor: Deleted 1 Actors (0.105 secs)
+[2017.07.10-01.22.37:570][505]LogEditorActor: Deleted Actor: PlayerStart
+[2017.07.10-01.22.37:629][505]LogEditorActor: Deleted 1 Actors (0.059 secs)
+[2017.07.10-01.22.39:400][560]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.39:400][560]LogEditorTransaction: Undo Delete selection
+[2017.07.10-01.22.39:617][561]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.39:617][561]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.39:754][566]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.39:754][566]LogEditorTransaction: Undo Delete selection
+[2017.07.10-01.22.39:992][567]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.39:992][567]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.40:277][581]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.40:277][581]LogEditorTransaction: Undo Delete selection
+[2017.07.10-01.22.40:509][583]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.40:509][583]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.40:722][584]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.40:722][584]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.41:196][599]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.41:196][599]LogEditorTransaction: Undo Delete selection
+[2017.07.10-01.22.41:535][605]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.41:535][605]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.42:177][623]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.42:177][623]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.42:717][636]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.42:717][636]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.43:253][651]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.43:253][651]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.43:575][658]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.43:576][658]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.44:197][675]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.44:197][675]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.44:906][693]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.44:906][693]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.45:362][705]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.45:362][705]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.46:224][721]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.46:224][721]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.46:902][735]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.46:902][735]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.47:694][750]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.47:694][750]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.48:228][761]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.48:228][761]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.48:797][772]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.48:797][772]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.22.49:366][782]Cmd: TRANSACTION UNDO
+[2017.07.10-01.22.49:366][782]LogEditorTransaction: Undo Delete Actors
+[2017.07.10-01.22.51:631][824]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.22.51:689][824]LogEditorActor: Deleted 1 Actors (0.059 secs)
+[2017.07.10-01.22.53:524][865]LogTexture:Display: Building textures: Texture2D_3 (G8, 128X128)
+[2017.07.10-01.23.04:717][ 74]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2017.07.10-01.24.36:811][826]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.24.36:835][826]LogMaterial: Missing cached shader map for material M_Basic_Floor, compiling. 
+[2017.07.10-01.24.44:223][962]LogEditorViewport: Clicking on Actor (double click): Landscape (Landscape)
+[2017.07.10-01.24.44:501][966]LogEditorViewport: Clicking on Actor (double click): Landscape (Landscape)
+[2017.07.10-01.24.44:894][973]LogEditorViewport: Clicking on Actor (double click): Landscape (Landscape)
+[2017.07.10-01.24.45:245][979]LogEditorViewport: Clicking on Actor (double click): Landscape (Landscape)
+[2017.07.10-01.24.54:632][152]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.54:632][152]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.24.54:693][152]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.24.55:636][166]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.55:636][166]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.24.55:693][166]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.24.56:304][179]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.56:304][179]LogEditorTransaction: Undo Clicking on Actors (double-click)
+[2017.07.10-01.24.57:506][203]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.57:506][203]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.24.57:563][203]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.24.58:072][214]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.58:072][214]LogEditorTransaction: Undo Clicking on Actors (double-click)
+[2017.07.10-01.24.58:963][233]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.58:963][233]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.24.59:022][233]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.24.59:700][248]Cmd: TRANSACTION UNDO
+[2017.07.10-01.24.59:700][248]LogEditorTransaction: Undo Clicking on Actors (double-click)
+[2017.07.10-01.25.00:396][262]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.00:396][262]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.25.00:463][262]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.25.01:092][274]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.01:092][274]LogEditorTransaction: Undo Clicking on Actors (double-click)
+[2017.07.10-01.25.01:652][284]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.01:652][284]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.25.01:712][284]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.25.02:493][300]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.02:493][300]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.25.40:721][414]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.40:721][414]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.25.40:778][414]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.25.41:332][425]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.41:332][425]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.25.41:383][425]LogTexture:Display: Building textures: Texture2D_0 (BGRA8, 64X64)
+[2017.07.10-01.25.41:772][434]Cmd: TRANSACTION UNDO
+[2017.07.10-01.25.41:772][434]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2017.07.10-01.26.10:514][109]MapCheck: New page: Map Check
+[2017.07.10-01.26.10:531][109]LightingResults: New page: Lighting Build - Jul 9, 2017, 5:26:10 PM
+[2017.07.10-01.26.10:547][109]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2017.07.10-01.26.10:549][109]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2017.07.10-01.26.10:549][109]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2017.07.10-01.26.10:550][109]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2017.07.10-01.26.10:550][109]LogSwarmInterface: [TryOpenConnection] Local Process ID is 11616
+[2017.07.10-01.26.15:059][109]LogStaticLightingSystem:Warning: No importance volume found, so the scene bounding box was used.  You can optimize your scene's quality and lighting build times by adding importance volumes.
+[2017.07.10-01.26.15:059][109]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2017.07.10-01.26.15:059][109]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2017.07.10-01.26.15:059][109]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2017.07.10-01.26.15:059][109]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2017.07.10-01.26.15:059][109]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2017.07.10-01.26.15:277][109]LogEditorBuildUtils: Build time 0:04
+[2017.07.10-01.26.15:322][110]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer LandscapeMaterialInstanceConstant_1, compiling. 
+[2017.07.10-01.26.15:337][110]LogMaterial: Missing cached shader map for material FLightmassMaterialRenderer LandscapeMaterialInstanceConstant_1, compiling. 
+[2017.07.10-01.26.20:643][190]Job is a success!
+[2017.07.10-01.26.20:989][191]LogTexture:Display: Building textures: SkyOcclusion1_1 (AutoDXT, 128X64)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: HQ_Lightmap1_1 (AutoDXT, 128X128)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: LQ_Lightmap_1_1 (DXT1, 128X128)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: SkyOcclusion1_2 (AutoDXT, 64X32)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: HQ_Lightmap1_2 (AutoDXT, 64X64)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: LQ_Lightmap_1_2 (DXT1, 64X64)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: ShadowMapTexture2D_6 (G8, 64X64)
+[2017.07.10-01.26.20:990][191]LogTexture:Display: Building textures: ShadowMapTexture2D_7 (G8, 32X32)
+[2017.07.10-01.26.21:057][191]Lightmass on DESKTOP-87LHRMB: 3.47 sec total, 1.21 sec importing, 93 ms setup, 346 ms photons, 1.80 sec processing, 0 ms extra exporting [3/3 mappings]. Threads: 7.17 sec total, 2.16 sec processing.
+[2017.07.10-01.26.21:067][191]LogStaticLightingSystem: Illumination: 10.4 sec (44 ms encoding lightmaps, 65 ms encoding shadowmaps)
+[2017.07.10-01.26.21:067][191]LogStaticLightingSystem: Lightmap texture memory:  0.1 MB (0.1 MB streaming, 0.0 MB non-streaming), 4 textures
+[2017.07.10-01.26.21:067][191]LogStaticLightingSystem: Shadowmap texture memory: 0.0 MB (0.0 MB streaming, 0.0 MB non-streaming), 2 textures
+[2017.07.10-01.26.22:077][191]DumpUnbuiltLightIteractions
+[2017.07.10-01.26.22:077][191]Lights with unbuilt interactions: 0
+[2017.07.10-01.26.22:077][191]
+[2017.07.10-01.26.22:077][191]Primitives with unbuilt interactions: 0
+[2017.07.10-01.26.22:411][192]Cmd: MAP CHECK NOTIFYRESULTS
+[2017.07.10-01.26.22:412][192]MapCheck: New page: Minimal_Default - Jul 9, 2017, 5:26:22 PM
+[2017.07.10-01.26.22:518][192]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 106.377ms to complete.
+[2017.07.10-01.26.46:458][861]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2017.07.10-01.28.33:446][592]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.28.56:257][136]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2017.07.10-01.29.32:615][ 28]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape)
+[2017.07.10-01.29.52:256][515]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.52:256][515]LogEditorTransaction: Undo Move Actors
+[2017.07.10-01.29.52:773][524]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.52:773][524]LogEditorTransaction: Undo Select Brush Surface
+[2017.07.10-01.29.54:231][576]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.54:231][576]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.29.57:053][645]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.57:054][645]LogEditorTransaction: Undo Move Actors
+[2017.07.10-01.29.57:540][656]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.57:540][656]LogEditorTransaction: Undo Select Brush Surface
+[2017.07.10-01.29.58:139][671]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.58:139][671]LogEditorTransaction: Undo Move Actors
+[2017.07.10-01.29.58:708][685]Cmd: TRANSACTION UNDO
+[2017.07.10-01.29.58:708][685]LogEditorTransaction: Undo Move Actors
+[2017.07.10-01.31.13:906][723]Cmd: DELETE
+[2017.07.10-01.31.13:906][723]Cmd: ACTOR DELETE
+[2017.07.10-01.31.13:907][723]LogEditorActor: Deleted Actor: LandscapeGizmoActiveActor
+[2017.07.10-01.31.13:936][723]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2017.07.10-01.31.19:165][949]Cmd: DELETE
+[2017.07.10-01.31.19:165][949]Cmd: ACTOR DELETE
+[2017.07.10-01.31.19:166][949]LogEditorActor: Deleted Actor: SphereReflectionCapture
+[2017.07.10-01.31.19:192][949]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2017.07.10-01.31.26:157][238]Cmd: DELETE
+[2017.07.10-01.31.26:157][238]Cmd: ACTOR DELETE
+[2017.07.10-01.31.26:158][238]LogEditorActor: Deleted Actor: Landscape
+[2017.07.10-01.31.26:186][238]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2017.07.10-01.31.57:398][145]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.32.07:143][380]Cmd: DELETE
+[2017.07.10-01.32.07:143][380]Cmd: ACTOR DELETE
+[2017.07.10-01.32.07:144][380]LogEditorActor: Deleted Actor: Brush
+[2017.07.10-01.32.07:192][380]LogEditorActor: Deleted 1 Actors (0.049 secs)
+[2017.07.10-01.32.10:801][483]Cmd: BRUSH SUBTRACT SELECTNEWBRUSH
+[2017.07.10-01.32.21:977][778]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.32.24:086][829]Cmd: TRANSACTION UNDO
+[2017.07.10-01.32.24:087][829]LogEditorTransaction: Undo Clicking on Actors
+[2017.07.10-01.32.35:032][279]Cmd: DELETE
+[2017.07.10-01.32.35:032][279]Cmd: ACTOR DELETE
+[2017.07.10-01.32.35:033][279]LogEditorActor: Deleted Actor: StaticMeshActor
+[2017.07.10-01.32.35:059][279]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2017.07.10-01.32.41:271][543]Cmd: DELETE
+[2017.07.10-01.32.41:271][543]Cmd: ACTOR DELETE
+[2017.07.10-01.32.41:272][543]LogEditorActor: Deleted Actor: Brush
+[2017.07.10-01.32.41:304][543]LogEditorActor: Deleted 1 Actors (0.033 secs)
+[2017.07.10-01.32.46:788][761]Cmd: DELETE
+[2017.07.10-01.32.46:788][761]Cmd: ACTOR DELETE
+[2017.07.10-01.32.46:789][761]LogEditorActor: Deleted Actor: PostProcessVolume
+[2017.07.10-01.32.46:819][761]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2017.07.10-01.33.19:868][805]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.33.34:394][131]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2017.07.10-01.34.08:247][ 34]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.34.20:674][350]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.35.00:605][373]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-01.35.02:639][373]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-01.35.02:660][373]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-01.35.02:731][373]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 5:35:02 PM)
+[2017.07.10-01.35.02:746][373]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-01.35.02:771][373]LogPlayLevel: PIE: StaticDuplicateObject took: (0.025506s)
+[2017.07.10-01.35.02:772][373]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-01.35.02:772][373]LogPlayLevel: PIE: World Init took: (0.001240s)
+[2017.07.10-01.35.02:785][373]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.045382s)
+[2017.07.10-01.35.02:856][373]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-01.35.02:888][373]LogInit: FAudioDevice initialized.
+[2017.07.10-01.35.02:947][373]LogUObjectGlobals:Warning: Failed to find object 'Class /Script/BasicEaters.BasicEatersGameMode'
+[2017.07.10-01.35.02:952][373]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-01.35.03:089][373]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-21.35.03
+[2017.07.10-01.35.03:101][373]LogWorld: Bringing up level for play took: 0.013815
+[2017.07.10-01.35.04:888][373]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0112 seconds. Added 11 classes and 0 folders.
+[2017.07.10-01.35.05:000][373]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 2.985
+[2017.07.10-01.35.05:021][373]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-01.35.18:478][835]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-01.35.18:595][835]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-01.36.22:037][514]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-01.36.29:513][676]LogSavePackage: Save=302.05ms
+[2017.07.10-01.36.29:513][676]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default353EA7ED43B16A2C41A58B8173DDF0A0.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap'
+[2017.07.10-01.36.29:523][676]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap
+[2017.07.10-01.36.29:605][676]LogSavePackage: Save=35.95ms
+[2017.07.10-01.36.29:605][676]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_BuiltData3EC444BE47BCF8D41CA1C4947E8E80EA.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset'
+[2017.07.10-01.36.29:613][676]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset
+[2017.07.10-02.08.09:211][188]LogSavePackage: Save=245.86ms
+[2017.07.10-02.08.09:211][188]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default5084A97F42A5EEF7A0AF8C9A337D443A.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap'
+[2017.07.10-02.08.09:216][188]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap
+[2017.07.10-02.08.09:322][188]LogSavePackage: Save=31.50ms
+[2017.07.10-02.08.09:322][188]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_BuiltData82C4279C432E7F91B6148EA46DE273F5.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset'
+[2017.07.10-02.08.09:325][188]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset
+[2017.07.10-02.08.34:189][765]Running D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" -game -rocket -progress
+[2017.07.10-02.08.34:930][765]Discovering modules, targets and source code for project...
+[2017.07.10-02.08.41:491][765]LogSlate: Took 0.017316 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.07.10-02.08.43:217][765]LogVSAccessor:Warning: Couldn't access Visual Studio
+[2017.07.10-02.08.43:272][765]Candidate modules for hot reload:
+[2017.07.10-02.08.43:272][765]  BasicEaters
+[2017.07.10-02.08.43:272][765]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BasicEaters -ModuleWithSuffix BasicEaters 581 Win64 Development -editorrecompile -canskiplink "C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" ]
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: New page: Compilation - Jul 9, 2017, 6:10:42 PM
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Performing full C++ include scan (hot reloading a new target)
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Parsing headers for BasicEatersEditor
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\BasicEaters.uproject" "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\BasicEatersEditor\Development\BasicEatersEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Reflection code generated for BasicEatersEditor in 5.4837817 seconds
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Performing 4 actions (2 in parallel)
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Eater1.cpp
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info BasicEaters.generated.cpp
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info [3/4] Link UE4Editor-BasicEaters-581.dll
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info [4/4] Link UE4Editor-BasicEaters-581.lib
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-581.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-581.exp
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-581.suppressed.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-581.suppressed.exp
+[2017.07.10-02.10.42:487][765]CompilerResultsLog: Info Total build time: 118.92 seconds (Local executor: 95.17 seconds)
+[2017.07.10-02.10.42:487][765]LogMainFrame: MainFrame: Module compiling took 119.258 seconds
+[2017.07.10-02.10.42:629][765]LogClass: Could not find existing class Eater1 in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-02.10.42:632][765]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0019 seconds. Added 2 classes and 2 folders.
+[2017.07.10-02.10.42:634][765]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-02.10.42:751][765]LogContentBrowser: Native class hierarchy populated in 0.0202 seconds. Added 2333 classes and 497 folders.
+[2017.07.10-02.10.42:832][765]Display: HotReload took 119.6s.
+[2017.07.10-02.10.42:834][765]Warning: HotReload operation took 119.6s.
+[2017.07.10-02.10.42:913][765]LogHotReload: New module detected: UE4Editor-BasicEaters-581.dll
+[2017.07.10-02.10.43:025][766]LogHotReload: Starting Hot-Reload from IDE
+[2017.07.10-02.10.43:171][766]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0020 seconds. Added 2 classes and 2 folders.
+[2017.07.10-02.10.43:173][766]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-02.10.43:194][766]LogContentBrowser: Native class hierarchy populated in 0.0178 seconds. Added 2333 classes and 497 folders.
+[2017.07.10-02.10.43:202][766]Display: HotReload took  0.2s.
+[2017.07.10-02.11.07:541][908]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/Eater1.h'
+[2017.07.10-02.11.07:589][908]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/Eater1.cpp'
+[2017.07.10-02.34.05:970][ 33]LogHotReload: New module detected: UE4Editor-BasicEaters-4644.dll
+[2017.07.10-02.34.06:994][ 37]LogHotReload: Starting Hot-Reload from IDE
+[2017.07.10-02.34.07:149][ 37]LogClass: Could not find existing class Eater1 in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-02.34.07:154][ 37]LogHotReload: Re-instancing Eater1 after hot-reload.
+[2017.07.10-02.34.07:230][ 37]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0030 seconds. Added 2 classes and 2 folders.
+[2017.07.10-02.34.07:232][ 37]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-02.34.07:320][ 37]LogContentBrowser: Native class hierarchy populated in 0.0181 seconds. Added 2333 classes and 497 folders.
+[2017.07.10-02.34.07:324][ 37]Display: HotReload took  0.3s.
+[2017.07.10-02.42.43:679][124]LogEditor: Attempting to add actor of class 'Eater1' to level at -2990.00,-2180.00,3490.00
+[2017.07.10-02.42.44:653][154]LogEditor: Attempting to add actor of class 'Eater1' to level at -180.00,-310.00,0.00
+[2017.07.10-02.43.18:492][ 28]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2017.07.10-02.43.19:877][ 63]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-02.43.19:915][ 63]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.43.19:916][ 63]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-02.43.19:917][ 63]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 6:43:19 PM)
+[2017.07.10-02.43.19:917][ 63]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-02.43.20:017][ 63]LogPlayLevel: PIE: StaticDuplicateObject took: (0.099261s)
+[2017.07.10-02.43.20:021][ 63]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-02.43.20:022][ 63]LogPlayLevel: PIE: World Init took: (0.004502s)
+[2017.07.10-02.43.20:022][ 63]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.104763s)
+[2017.07.10-02.43.20:069][ 63]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-02.43.20:105][ 63]LogInit: FAudioDevice initialized.
+[2017.07.10-02.43.20:140][ 63]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-02.43.20:143][ 63]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-22.43.20
+[2017.07.10-02.43.20:144][ 63]LogWorld: Bringing up level for play took: 0.001929
+[2017.07.10-02.43.20:147][ 63]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.132
+[2017.07.10-02.43.20:147][ 63]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.48.28:435][865]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.48.28:520][865]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.48.30:478][911]LogEditorViewport: Clicking on Actor (LMB): Eater1 (Eater11)
+[2017.07.10-02.49.29:059][527]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-02.49.29:101][527]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.49.29:101][527]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-02.49.29:101][527]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 6:49:29 PM)
+[2017.07.10-02.49.29:101][527]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-02.49.29:119][527]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017861s)
+[2017.07.10-02.49.29:122][527]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-02.49.29:122][527]LogPlayLevel: PIE: World Init took: (0.002715s)
+[2017.07.10-02.49.29:123][527]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.021393s)
+[2017.07.10-02.49.29:175][527]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-02.49.29:211][527]LogInit: FAudioDevice initialized.
+[2017.07.10-02.49.29:255][527]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-02.49.29:257][527]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-22.49.29
+[2017.07.10-02.49.29:258][527]LogWorld: Bringing up level for play took: 0.002170
+[2017.07.10-02.49.29:260][527]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.755
+[2017.07.10-02.49.29:261][527]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.51.06:207][866]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.51.06:287][866]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.51.37:213][760]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-02.51.37:245][760]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.51.37:246][760]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-02.51.37:246][760]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 6:51:37 PM)
+[2017.07.10-02.51.37:246][760]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-02.51.37:261][760]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014902s)
+[2017.07.10-02.51.37:262][760]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-02.51.37:263][760]LogPlayLevel: PIE: World Init took: (0.001749s)
+[2017.07.10-02.51.37:263][760]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.017280s)
+[2017.07.10-02.51.37:318][760]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-02.51.37:356][760]LogInit: FAudioDevice initialized.
+[2017.07.10-02.51.37:391][760]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-02.51.37:393][760]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-22.51.37
+[2017.07.10-02.51.37:394][760]LogWorld: Bringing up level for play took: 0.002079
+[2017.07.10-02.51.37:396][760]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.619
+[2017.07.10-02.51.37:396][760]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.51.51:577][235]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.51.51:660][235]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.52.38:630][549]LogSavePackage: Save=262.90ms
+[2017.07.10-02.52.38:630][549]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_Auto3BE217E0C4421F36757B523A597C35DF6.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto3.umap'
+[2017.07.10-02.52.38:634][549]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto3.umap
+[2017.07.10-02.52.38:644][549]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.343
+[2017.07.10-02.52.38:644][549]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.343
+[2017.07.10-02.53.55:003][850]Running D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BasicEaters Win64 Development -editorrecompile "C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" -invalidatemakefilesonly
+[2017.07.10-02.53.55:606][850]Invalidating makefiles only in this run.
+[2017.07.10-02.53.55:732][850]Candidate modules for hot reload:
+[2017.07.10-02.53.55:732][850]  BasicEaters
+[2017.07.10-02.53.55:732][850]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BasicEaters -ModuleWithSuffix BasicEaters 4050 Win64 Development -editorrecompile -canskiplink "C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" ]
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: New page: Compilation - Jul 9, 2017, 6:54:12 PM
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info Parsing headers for BasicEatersEditor
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\BasicEaters.uproject" "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\BasicEatersEditor\Development\BasicEatersEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info Reflection code generated for BasicEatersEditor in 6.6719878 seconds
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info Performing 5 actions (2 in parallel)
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info NormalFoodPellets.cpp
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info Eater1.cpp
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info BasicEaters.generated.cpp
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info [4/5] Link UE4Editor-BasicEaters-4050.dll
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info [5/5] Link UE4Editor-BasicEaters-4050.lib
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4050.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4050.exp
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4050.suppressed.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4050.suppressed.exp
+[2017.07.10-02.54.12:303][850]CompilerResultsLog: Info Total build time: 16.29 seconds (Local executor: 5.02 seconds)
+[2017.07.10-02.54.12:303][850]LogMainFrame: MainFrame: Module compiling took 16.576 seconds
+[2017.07.10-02.54.12:463][850]LogClass: Could not find existing class NormalFoodPellets in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-02.54.12:468][850]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0028 seconds. Added 3 classes and 2 folders.
+[2017.07.10-02.54.12:470][850]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-02.54.12:565][850]LogContentBrowser: Native class hierarchy populated in 0.0247 seconds. Added 2334 classes and 497 folders.
+[2017.07.10-02.54.12:565][850]Display: HotReload took 16.9s.
+[2017.07.10-02.54.12:567][850]Warning: HotReload operation took 16.9s.
+[2017.07.10-02.54.12:836][850]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/NormalFoodPellets.h'
+[2017.07.10-02.54.13:123][850]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/NormalFoodPellets.cpp'
+[2017.07.10-02.54.13:148][850]LogHotReload: New module detected: UE4Editor-BasicEaters-4050.dll
+[2017.07.10-02.54.13:217][851]LogHotReload: Starting Hot-Reload from IDE
+[2017.07.10-02.54.13:357][851]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0028 seconds. Added 3 classes and 2 folders.
+[2017.07.10-02.54.13:359][851]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-02.54.13:383][851]LogContentBrowser: Native class hierarchy populated in 0.0193 seconds. Added 2334 classes and 497 folders.
+[2017.07.10-02.54.13:387][851]Display: HotReload took  0.2s.
+[2017.07.10-02.54.20:051][ 25]LogEditor: Attempting to add actor of class 'NormalFoodPellets' to level at 320.00,-1500.00,10.00
+[2017.07.10-02.54.20:880][ 48]LogEditor: Attempting to add actor of class 'NormalFoodPellets' to level at 840.00,-1130.00,0.00
+[2017.07.10-02.54.47:388][801]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-02.54.47:422][801]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.54.47:422][801]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-02.54.47:423][801]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 6:54:47 PM)
+[2017.07.10-02.54.47:423][801]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-02.54.47:438][801]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015578s)
+[2017.07.10-02.54.47:440][801]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-02.54.47:440][801]LogPlayLevel: PIE: World Init took: (0.001839s)
+[2017.07.10-02.54.47:441][801]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.017855s)
+[2017.07.10-02.54.47:489][801]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-02.54.47:525][801]LogInit: FAudioDevice initialized.
+[2017.07.10-02.54.47:562][801]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-02.54.47:565][801]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-22.54.47
+[2017.07.10-02.54.47:792][801]LogWorld: Bringing up level for play took: 0.228735
+[2017.07.10-02.54.47:795][801]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.22
+[2017.07.10-02.54.47:795][801]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.54.52:370][961]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.54.52:458][961]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.56.29:115][464]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-02.56.29:151][464]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.56.29:151][464]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-02.56.29:152][464]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 6:56:29 PM)
+[2017.07.10-02.56.29:152][464]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-02.56.29:165][464]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012905s)
+[2017.07.10-02.56.29:166][464]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-02.56.29:167][464]LogPlayLevel: PIE: World Init took: (0.001906s)
+[2017.07.10-02.56.29:167][464]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.015199s)
+[2017.07.10-02.56.29:218][464]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-02.56.29:258][464]LogInit: FAudioDevice initialized.
+[2017.07.10-02.56.29:300][464]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-02.56.29:303][464]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-22.56.29
+[2017.07.10-02.56.29:521][464]LogWorld: Bringing up level for play took: 0.219590
+[2017.07.10-02.56.29:523][464]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.492
+[2017.07.10-02.56.29:523][464]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.57.11:206][863]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.57.11:290][863]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.57.17:876][960]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-02.57.17:909][960]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.57.17:909][960]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-02.57.17:909][960]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 6:57:17 PM)
+[2017.07.10-02.57.17:909][960]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-02.57.17:923][960]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013520s)
+[2017.07.10-02.57.17:925][960]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-02.57.17:925][960]LogPlayLevel: PIE: World Init took: (0.002149s)
+[2017.07.10-02.57.17:925][960]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.016095s)
+[2017.07.10-02.57.17:980][960]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-02.57.18:013][960]LogInit: FAudioDevice initialized.
+[2017.07.10-02.57.18:047][960]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-02.57.18:049][960]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-22.57.18
+[2017.07.10-02.57.18:050][960]LogWorld: Bringing up level for play took: 0.001597
+[2017.07.10-02.57.18:052][960]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.037
+[2017.07.10-02.57.18:053][960]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.59.08:276][750]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-02.59.08:358][750]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.00.04:874][614]Running D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BasicEaters Win64 Development -editorrecompile "C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" -invalidatemakefilesonly
+[2017.07.10-03.00.05:278][614]Invalidating makefiles only in this run.
+[2017.07.10-03.00.05:421][614]Candidate modules for hot reload:
+[2017.07.10-03.00.05:421][614]  BasicEaters
+[2017.07.10-03.00.05:422][614]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BasicEaters -ModuleWithSuffix BasicEaters 2235 Win64 Development -editorrecompile -canskiplink "C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" ]
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: New page: Compilation - Jul 9, 2017, 7:00:21 PM
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info Parsing headers for BasicEatersEditor
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\BasicEaters.uproject" "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\BasicEatersEditor\Development\BasicEatersEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info Reflection code generated for BasicEatersEditor in 6.3976943 seconds
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info Performing 5 actions (2 in parallel)
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info BonusFoodPellet.cpp
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info NormalFoodPellets.cpp
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info BasicEaters.generated.cpp
+[2017.07.10-03.00.21:865][614]CompilerResultsLog: Info [4/5] Link UE4Editor-BasicEaters-2235.dll
+[2017.07.10-03.00.21:866][614]CompilerResultsLog: Info [5/5] Link UE4Editor-BasicEaters-2235.lib
+[2017.07.10-03.00.21:866][614]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-2235.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-2235.exp
+[2017.07.10-03.00.21:866][614]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-2235.suppressed.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-2235.suppressed.exp
+[2017.07.10-03.00.21:866][614]CompilerResultsLog: Info Total build time: 16.13 seconds (Local executor: 5.32 seconds)
+[2017.07.10-03.00.21:866][614]LogMainFrame: MainFrame: Module compiling took 16.457 seconds
+[2017.07.10-03.00.22:021][614]LogClass: Could not find existing class BonusFoodPellet in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-03.00.22:022][614]LogClass: Could not find existing class NormalFoodPellets in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-03.00.22:027][614]LogHotReload: Re-instancing NormalFoodPellets after hot-reload.
+[2017.07.10-03.00.22:236][614]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0020 seconds. Added 4 classes and 2 folders.
+[2017.07.10-03.00.22:239][614]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-03.00.22:318][614]LogContentBrowser: Native class hierarchy populated in 0.0167 seconds. Added 2335 classes and 497 folders.
+[2017.07.10-03.00.22:318][614]Display: HotReload took 16.9s.
+[2017.07.10-03.00.22:320][614]Warning: HotReload operation took 16.9s.
+[2017.07.10-03.00.22:497][614]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/BonusFoodPellet.h'
+[2017.07.10-03.00.22:624][614]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/BonusFoodPellet.cpp'
+[2017.07.10-03.00.22:648][614]LogHotReload: New module detected: UE4Editor-BasicEaters-2235.dll
+[2017.07.10-03.00.22:714][615]LogHotReload: Starting Hot-Reload from IDE
+[2017.07.10-03.00.22:839][615]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0028 seconds. Added 4 classes and 2 folders.
+[2017.07.10-03.00.22:842][615]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-03.00.22:866][615]LogContentBrowser: Native class hierarchy populated in 0.0203 seconds. Added 2335 classes and 497 folders.
+[2017.07.10-03.00.22:872][615]Display: HotReload took  0.2s.
+[2017.07.10-03.05.54:120][708]LogSavePackage: Save=177.44ms
+[2017.07.10-03.05.54:120][708]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_Auto4A8D1917C4EDAFFC55DFC3893F7893FA4.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto4.umap'
+[2017.07.10-03.05.54:123][708]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto4.umap
+[2017.07.10-03.05.54:126][708]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.239
+[2017.07.10-03.05.54:126][708]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.239
+[2017.07.10-03.06.45:078][934]LogEditor: Attempting to add actor of class 'BonusFoodPellet' to level at 300.00,300.00,0.00
+[2017.07.10-03.06.45:894][957]LogEditor: Attempting to add actor of class 'BonusFoodPellet' to level at 430.00,-90.00,0.00
+[2017.07.10-03.07.39:490][129]LogEditorViewport: Clicking on Actor (LMB): DirectionalLight (Light Source)
+[2017.07.10-03.07.42:580][213]LogEditorViewport: Clicking on Actor (LMB): DirectionalLight (Light Source)
+[2017.07.10-03.07.43:659][241]LogEditorViewport: Clicking on Actor (LMB): NormalFoodPellets (NormalFoodPellets1)
+[2017.07.10-03.07.45:350][288]LogEditorViewport: Clicking on Actor (LMB): NormalFoodPellets (NormalFoodPellets1)
+[2017.07.10-03.07.49:086][394]LogEditorViewport: Clicking on Actor (LMB): NormalFoodPellets (NormalFoodPellets1)
+[2017.07.10-03.07.56:834][610]LogEditorViewport: Clicking on Actor (LMB): BonusFoodPellet (BonusFoodPellet1)
+[2017.07.10-03.07.59:065][677]LogEditorViewport: Clicking on Actor (LMB): NormalFoodPellets (NormalFoodPellets1)
+[2017.07.10-03.09.23:416][  3]LogEditorViewport: Clicking on Actor (LMB): Eater1 (Eater11)
+[2017.07.10-03.09.29:052][153]LogSavePackage: Save=202.18ms
+[2017.07.10-03.09.29:052][153]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_DefaultDD60526E4C78670169C861817DF6F7F8.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap'
+[2017.07.10-03.09.29:062][153]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap
+[2017.07.10-03.09.29:165][153]LogSavePackage: Save=34.83ms
+[2017.07.10-03.09.29:165][153]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_BuiltData6412959644BF26D569E179940F98A6F5.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset'
+[2017.07.10-03.09.29:170][153]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset
+[2017.07.10-03.09.45:241][595]Running D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" -game -rocket -progress
+[2017.07.10-03.09.45:544][595]Discovering modules, targets and source code for project...
+[2017.07.10-03.09.49:580][595]LogVSAccessor:Warning: Couldn't access Visual Studio
+[2017.07.10-03.09.49:594][595]Candidate modules for hot reload:
+[2017.07.10-03.09.49:594][595]  BasicEaters
+[2017.07.10-03.09.49:594][595]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BasicEaters -ModuleWithSuffix BasicEaters 8393 Win64 Development -editorrecompile -canskiplink "C:/Users/yugch/Documents/Unreal Projects/BasicEaters/BasicEaters.uproject" ]
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: New page: Compilation - Jul 9, 2017, 7:10:01 PM
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info Parsing headers for BasicEatersEditor
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\BasicEaters.uproject" "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\BasicEatersEditor\Development\BasicEatersEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info Reflection code generated for BasicEatersEditor in 3.9345183 seconds
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info Performing 5 actions (2 in parallel)
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info BonusFoodPellet.cpp
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info Wall.cpp
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info BasicEaters.generated.cpp
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info [4/5] Link UE4Editor-BasicEaters-8393.dll
+[2017.07.10-03.10.01:802][595]CompilerResultsLog: Info [5/5] Link UE4Editor-BasicEaters-8393.lib
+[2017.07.10-03.10.01:803][595]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-8393.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-8393.exp
+[2017.07.10-03.10.01:803][595]CompilerResultsLog: Info    Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-8393.suppressed.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-8393.suppressed.exp
+[2017.07.10-03.10.01:803][595]CompilerResultsLog: Info Total build time: 11.96 seconds (Local executor: 5.39 seconds)
+[2017.07.10-03.10.01:803][595]LogMainFrame: MainFrame: Module compiling took 12.223 seconds
+[2017.07.10-03.10.01:903][595]LogClass: Could not find existing class BonusFoodPellet in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-03.10.01:905][595]LogClass: Could not find existing class Wall in package /Script/BasicEaters for HotReload, assuming new class
+[2017.07.10-03.10.01:908][595]LogHotReload: Re-instancing BonusFoodPellet after hot-reload.
+[2017.07.10-03.10.02:007][595]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0022 seconds. Added 5 classes and 2 folders.
+[2017.07.10-03.10.02:008][595]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-03.10.02:062][595]LogContentBrowser: Native class hierarchy populated in 0.0139 seconds. Added 2336 classes and 497 folders.
+[2017.07.10-03.10.02:063][595]Display: HotReload took 12.5s.
+[2017.07.10-03.10.02:064][595]Warning: HotReload operation took 12.5s.
+[2017.07.10-03.10.02:098][595]LogHotReload: New module detected: UE4Editor-BasicEaters-8393.dll
+[2017.07.10-03.10.02:138][596]LogHotReload: Starting Hot-Reload from IDE
+[2017.07.10-03.10.02:274][596]LogContentBrowser: Native class hierarchy updated for 'BasicEaters' in 0.0026 seconds. Added 5 classes and 2 folders.
+[2017.07.10-03.10.02:276][596]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2017.07.10-03.10.02:299][596]LogContentBrowser: Native class hierarchy populated in 0.0184 seconds. Added 2336 classes and 497 folders.
+[2017.07.10-03.10.02:304][596]Display: HotReload took  0.2s.
+[2017.07.10-03.10.18:251][788]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/Wall.h'
+[2017.07.10-03.10.18:456][788]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Source/BasicEaters/Wall.cpp'
+[2017.07.10-03.11.00:599][ 17]LogEditor: Attempting to add actor of class 'Wall' to level at 400.00,130.00,0.00
+[2017.07.10-03.11.02:111][ 55]LogEditor: Attempting to add actor of class 'Wall' to level at 470.00,-10.00,0.00
+[2017.07.10-03.11.06:303][176]LogEditor: Attempting to add actor of class 'Wall' to level at 160.00,760.00,0.00
+[2017.07.10-03.11.06:917][194]LogEditor: Attempting to add actor of class 'Wall' to level at -1130.00,-250.00,0.00
+[2017.07.10-03.11.55:151][279]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-03.11.55:199][279]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.11.55:199][279]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-03.11.55:199][279]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 7:11:55 PM)
+[2017.07.10-03.11.55:199][279]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-03.11.55:211][279]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011926s)
+[2017.07.10-03.11.55:212][279]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-03.11.55:212][279]LogPlayLevel: PIE: World Init took: (0.001191s)
+[2017.07.10-03.11.55:213][279]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.013527s)
+[2017.07.10-03.11.55:263][279]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-03.11.55:290][279]LogInit: FAudioDevice initialized.
+[2017.07.10-03.11.55:325][279]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-03.11.55:327][279]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-23.11.55
+[2017.07.10-03.11.55:327][279]LogWorld: Bringing up level for play took: 0.001776
+[2017.07.10-03.11.55:329][279]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.685
+[2017.07.10-03.11.55:330][279]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.12.45:412][ 74]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.12.45:486][ 74]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.12.47:160][116]LogSavePackage: Save=213.45ms
+[2017.07.10-03.12.47:160][116]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_DefaultACAE9F4D432C60347B0F8AA311907E16.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap'
+[2017.07.10-03.12.47:165][116]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap
+[2017.07.10-03.12.47:263][116]LogSavePackage: Save=32.94ms
+[2017.07.10-03.12.47:263][116]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_BuiltData63E03B0540623EE9920040AEC49812E9.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset'
+[2017.07.10-03.12.47:265][116]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset
+[2017.07.10-03.15.06:982][273]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.10-03.15.07:012][273]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.15.07:012][273]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.10-03.15.07:012][273]PIE: New page: PIE session: Minimal_Default (Jul 9, 2017, 7:15:07 PM)
+[2017.07.10-03.15.07:012][273]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2017.07.10-03.15.07:027][273]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014027s)
+[2017.07.10-03.15.07:027][273]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.07.10-03.15.07:028][273]LogPlayLevel: PIE: World Init took: (0.001122s)
+[2017.07.10-03.15.07:028][273]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.015488s)
+[2017.07.10-03.15.07:070][273]LogInit: XAudio2 using 'Speakers / Headphones (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2017.07.10-03.15.07:096][273]LogInit: FAudioDevice initialized.
+[2017.07.10-03.15.07:133][273]LogLoad: Game class is 'GameModeBase'
+[2017.07.10-03.15.07:135][273]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 60) at 2017.07.09-23.15.07
+[2017.07.10-03.15.07:136][273]LogWorld: Bringing up level for play took: 0.001625
+[2017.07.10-03.15.07:137][273]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 1.123
+[2017.07.10-03.15.07:138][273]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.15.40:355][502]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.15.40:429][502]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2017.07.10-03.15.41:673][530]LogSavePackage: Save=198.32ms
+[2017.07.10-03.15.41:673][530]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default17EBE7304FE7F80D0CEC35B7E934090F.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap'
+[2017.07.10-03.15.41:678][530]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default.umap
+[2017.07.10-03.15.41:777][530]LogSavePackage: Save=29.99ms
+[2017.07.10-03.15.41:777][530]LogSavePackage: Moving 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Minimal_Default_BuiltDataD36F30BE4941E4F870C1EAB4B010D4E5.tmp' to 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset'
+[2017.07.10-03.15.41:779][530]LogSavePackage:Display: Finished SavePackage C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset
+[2017.07.10-03.15.44:182][578]Cmd: QUIT_EDITOR
+[2017.07.10-03.15.45:457][578]LogWindowsTextInputMethodSystem:Display: IME system now deactivated.
+[2017.07.10-03.15.45:533][578]LogExit: Preparing to exit.
+[2017.07.10-03.15.46:678][578]LogExit: Editor shut down
+[2017.07.10-03.15.46:716][578]LogExit: Transaction tracking system shut down
+[2017.07.10-03.15.48:191][578]LogObj: Freed 0b from 0 cluster array pools.
+[2017.07.10-03.15.48:191][578]LogExit: Object subsystem successfully closed.
+[2017.07.10-03.15.48:375][578]LogD3D11RHI: Shutdown
+[2017.07.10-03.15.48:375][578]LogD3D11RHI: CleanupD3DDevice
+[2017.07.10-03.15.48:566][578]LogD3D11RHI: ~FD3D11DynamicRHI
+[2017.07.10-03.15.49:321][578]LogModuleManager: Shutting down and abandoning module BasicEaters (539)
+[2017.07.10-03.15.49:321][578]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (530)
+[2017.07.10-03.15.49:321][578]LogModuleManager: Shutting down and abandoning module HierarchicalLODUtilities (528)
+[2017.07.10-03.15.49:328][578]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (526)
+[2017.07.10-03.15.49:337][578]LogModuleManager: Shutting down and abandoning module CrashTracker (524)
+[2017.07.10-03.15.49:337][578]LogModuleManager: Shutting down and abandoning module SceneOutliner (522)
+[2017.07.10-03.15.49:337][578]LogModuleManager: Shutting down and abandoning module AddContentDialog (520)
+[2017.07.10-03.15.49:351][578]LogDirectoryWatcher: A directory notification for 'D:/Program Files (x86)/UE_4.16/FeaturePacks/' was aborted.
+[2017.07.10-03.15.49:359][578]LogModuleManager: Shutting down and abandoning module WidgetCarousel (519)
+[2017.07.10-03.15.49:359][578]LogModuleManager: Shutting down and abandoning module EditorWidgets (516)
+[2017.07.10-03.15.49:359][578]LogModuleManager: Shutting down and abandoning module CollectionManager (514)
+[2017.07.10-03.15.49:359][578]LogDirectoryWatcher: A directory notification for 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/Collections/' was aborted.
+[2017.07.10-03.15.49:359][578]LogDirectoryWatcher: A directory notification for 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/Developers/yugch/Collections/' was aborted.
+[2017.07.10-03.15.49:359][578]LogDirectoryWatcher: A directory notification for 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Saved/Collections/' was aborted.
+[2017.07.10-03.15.49:359][578]LogModuleManager: Shutting down and abandoning module StatsViewer (512)
+[2017.07.10-03.15.49:371][578]LogModuleManager: Shutting down and abandoning module FoliageEdit (510)
+[2017.07.10-03.15.49:371][578]LogModuleManager: Shutting down and abandoning module LandscapeEditor (508)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module MeshPaintMode (506)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (504)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module ActorPickerMode (502)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module GeometryMode (500)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module TextureAlignMode (498)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module BspMode (496)
+[2017.07.10-03.15.49:391][578]LogModuleManager: Shutting down and abandoning module HardwareSurvey (494)
+[2017.07.10-03.15.49:400][578]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (492)
+[2017.07.10-03.15.49:412][578]LogModuleManager: Shutting down and abandoning module AutomationWorker (490)
+[2017.07.10-03.15.49:424][578]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (488)
+[2017.07.10-03.15.49:436][578]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (486)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module PlacementMode (485)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (482)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (480)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (478)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (476)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (474)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module Media (473)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (470)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module CharacterAI (468)
+[2017.07.10-03.15.49:513][578]LogModuleManager: Shutting down and abandoning module AudioCapture (466)
+[2017.07.10-03.15.49:532][578]LogModuleManager: Shutting down and abandoning module SequenceRecorder (465)
+[2017.07.10-03.15.49:540][578]LogModuleManager: Shutting down and abandoning module SmartSnapping (462)
+[2017.07.10-03.15.49:540][578]LogModuleManager: Shutting down and abandoning module SessionServices (460)
+[2017.07.10-03.15.49:540][578]LogModuleManager: Shutting down and abandoning module ViewportSnapping (458)
+[2017.07.10-03.15.49:540][578]LogModuleManager: Shutting down and abandoning module ViewportInteraction (456)
+[2017.07.10-03.15.49:540][578]LogModuleManager: Shutting down and abandoning module ClothPainter (454)
+[2017.07.10-03.15.49:562][578]LogModuleManager: Shutting down and abandoning module LogVisualizer (452)
+[2017.07.10-03.15.49:577][578]LogModuleManager: Shutting down and abandoning module IntroTutorials (450)
+[2017.07.10-03.15.49:599][578]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (449)
+[2017.07.10-03.15.49:599][578]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (446)
+[2017.07.10-03.15.49:599][578]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (444)
+[2017.07.10-03.15.49:605][578]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (442)
+[2017.07.10-03.15.49:605][578]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (440)
+[2017.07.10-03.15.49:605][578]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (439)
+[2017.07.10-03.15.49:986][578]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (436)
+[2017.07.10-03.15.49:986][578]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (434)
+[2017.07.10-03.15.49:986][578]LogModuleManager: Shutting down and abandoning module InputBindingEditor (432)
+[2017.07.10-03.15.49:995][578]LogModuleManager: Shutting down and abandoning module MergeActors (430)
+[2017.07.10-03.15.49:999][578]LogModuleManager: Shutting down and abandoning module SizeMap (428)
+[2017.07.10-03.15.50:000][578]LogModuleManager: Shutting down and abandoning module TreeMap (426)
+[2017.07.10-03.15.50:005][578]LogModuleManager: Shutting down and abandoning module ReferenceViewer (424)
+[2017.07.10-03.15.50:012][578]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (422)
+[2017.07.10-03.15.50:035][578]LogModuleManager: Shutting down and abandoning module LocalizationService (421)
+[2017.07.10-03.15.50:056][578]LogModuleManager: Shutting down and abandoning module HardwareTargeting (418)
+[2017.07.10-03.15.50:056][578]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (416)
+[2017.07.10-03.15.50:070][578]LogModuleManager: Shutting down and abandoning module UndoHistory (414)
+[2017.07.10-03.15.50:079][578]LogModuleManager: Shutting down and abandoning module UserFeedback (412)
+[2017.07.10-03.15.50:080][578]LogModuleManager: Shutting down and abandoning module XmlParser (410)
+[2017.07.10-03.15.50:083][578]LogModuleManager: Shutting down and abandoning module Blutility (408)
+[2017.07.10-03.15.50:093][578]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (406)
+[2017.07.10-03.15.50:093][578]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (405)
+[2017.07.10-03.15.50:094][578]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (402)
+[2017.07.10-03.15.50:094][578]LogModuleManager: Shutting down and abandoning module SettingsEditor (400)
+[2017.07.10-03.15.50:102][578]LogModuleManager: Shutting down and abandoning module ProjectLauncher (398)
+[2017.07.10-03.15.50:106][578]LogModuleManager: Shutting down and abandoning module SessionFrontend (396)
+[2017.07.10-03.15.50:107][578]LogModuleManager: Shutting down and abandoning module ProfilerClient (394)
+[2017.07.10-03.15.50:129][578]LogModuleManager: Shutting down and abandoning module DeviceManager (392)
+[2017.07.10-03.15.50:142][578]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (391)
+[2017.07.10-03.15.50:211][578]LogModuleManager: Shutting down and abandoning module AutomationController (388)
+[2017.07.10-03.15.50:235][578]LogModuleManager: Shutting down and abandoning module AutomationWindow (386)
+[2017.07.10-03.15.50:252][578]LogModuleManager: Shutting down and abandoning module Layers (384)
+[2017.07.10-03.15.50:295][578]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (382)
+[2017.07.10-03.15.50:295][578]LogModuleManager: Shutting down and abandoning module DetailCustomizations (380)
+[2017.07.10-03.15.50:309][578]LogModuleManager: Shutting down and abandoning module PackagesDialog (378)
+[2017.07.10-03.15.50:316][578]LogModuleManager: Shutting down and abandoning module Persona (376)
+[2017.07.10-03.15.50:359][578]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (375)
+[2017.07.10-03.15.50:359][578]LogModuleManager: Shutting down and abandoning module AnimGraph (373)
+[2017.07.10-03.15.50:359][578]LogModuleManager: Shutting down and abandoning module Kismet (370)
+[2017.07.10-03.15.50:369][578]LogModuleManager: Shutting down and abandoning module ClassViewer (368)
+[2017.07.10-03.15.50:378][578]LogModuleManager: Shutting down and abandoning module Toolbox (366)
+[2017.07.10-03.15.50:387][578]LogModuleManager: Shutting down and abandoning module ModuleUI (364)
+[2017.07.10-03.15.50:402][578]LogModuleManager: Shutting down and abandoning module MovieSceneTools (362)
+[2017.07.10-03.15.50:427][578]LogModuleManager: Shutting down and abandoning module OutputLog (360)
+[2017.07.10-03.15.50:456][578]LogModuleManager: Shutting down and abandoning module GammaUI (358)
+[2017.07.10-03.15.50:472][578]LogModuleManager: Shutting down and abandoning module Documentation (356)
+[2017.07.10-03.15.50:472][578]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (354)
+[2017.07.10-03.15.50:472][578]LogModuleManager: Shutting down and abandoning module MovieScene (352)
+[2017.07.10-03.15.50:472][578]LogModuleManager: Shutting down and abandoning module Niagara (350)
+[2017.07.10-03.15.50:472][578]LogModuleManager: Shutting down and abandoning module NiagaraEditor (349)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (346)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module AnalyticsET (344)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module PortalServices (342)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module PortalRpc (340)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module MessagingRpc (338)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module AIModule (336)
+[2017.07.10-03.15.50:509][578]LogModuleManager: Shutting down and abandoning module GameplayDebugger (335)
+[2017.07.10-03.15.50:510][578]LogModuleManager: Shutting down and abandoning module AITestSuite (333)
+[2017.07.10-03.15.50:516][578]LogModuleManager: Shutting down and abandoning module ProfilerService (330)
+[2017.07.10-03.15.50:738][578]LogModuleManager: Shutting down and abandoning module TaskGraph (328)
+[2017.07.10-03.15.50:766][578]LogModuleManager: Shutting down and abandoning module SteamVRController (326)
+[2017.07.10-03.15.50:766][578]LogModuleManager: Shutting down and abandoning module SteamVR (324)
+[2017.07.10-03.15.50:766][578]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (322)
+[2017.07.10-03.15.50:777][578]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (320)
+[2017.07.10-03.15.50:785][578]LogModuleManager: Shutting down and abandoning module OculusLibrary (318)
+[2017.07.10-03.15.50:785][578]LogModuleManager: Shutting down and abandoning module OculusInput (316)
+[2017.07.10-03.15.50:785][578]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (314)
+[2017.07.10-03.15.50:785][578]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (312)
+[2017.07.10-03.15.50:785][578]LogModuleManager: Shutting down and abandoning module CableComponent (310)
+[2017.07.10-03.15.50:792][578]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (308)
+[2017.07.10-03.15.50:792][578]LogModuleManager: Shutting down and abandoning module AndroidPermission (306)
+[2017.07.10-03.15.50:792][578]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (302)
+[2017.07.10-03.15.50:815][578]LogModuleManager: Shutting down and abandoning module HTML5Networking (300)
+[2017.07.10-03.15.50:815][578]LogModuleManager: Shutting down and abandoning module AlembicImporter (298)
+[2017.07.10-03.15.50:824][578]LogModuleManager: Shutting down and abandoning module AlembicLibrary (297)
+[2017.07.10-03.15.50:824][578]LogModuleManager: Shutting down and abandoning module GeometryCache (296)
+[2017.07.10-03.15.50:824][578]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (295)
+[2017.07.10-03.15.50:824][578]LogModuleManager: Shutting down and abandoning module SuperSearchEditor (290)
+[2017.07.10-03.15.50:824][578]LogModuleManager: Shutting down and abandoning module SuperSearch (289)
+[2017.07.10-03.15.50:824][578]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (286)
+[2017.07.10-03.15.50:825][578]LogModuleManager: Shutting down and abandoning module PluginBrowser (284)
+[2017.07.10-03.15.50:849][578]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (282)
+[2017.07.10-03.15.50:856][578]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (280)
+[2017.07.10-03.15.50:856][578]LogModuleManager: Shutting down and abandoning module DesktopPlatform (279)
+[2017.07.10-03.15.50:856][578]LogModuleManager: Shutting down and abandoning module UObjectPlugin (276)
+[2017.07.10-03.15.50:856][578]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (274)
+[2017.07.10-03.15.50:869][578]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (272)
+[2017.07.10-03.15.50:886][578]LogModuleManager: Shutting down and abandoning module GitSourceControl (270)
+[2017.07.10-03.15.50:907][578]LogModuleManager: Shutting down and abandoning module SourceControl (269)
+[2017.07.10-03.15.50:916][578]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (266)
+[2017.07.10-03.15.50:916][578]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (264)
+[2017.07.10-03.15.50:916][578]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (262)
+[2017.07.10-03.15.50:916][578]LogModuleManager: Shutting down and abandoning module Paper2DEditor (260)
+[2017.07.10-03.15.50:933][578]LogModuleManager: Shutting down and abandoning module MeshPaint (259)
+[2017.07.10-03.15.50:933][578]LogModuleManager: Shutting down and abandoning module LevelEditor (257)
+[2017.07.10-03.15.50:947][578]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (256)
+[2017.07.10-03.15.50:960][578]LogModuleManager: Shutting down and abandoning module MainFrame (254)
+[2017.07.10-03.15.50:964][578]LogModuleManager: Shutting down and abandoning module HotReload (253)
+[2017.07.10-03.15.50:964][578]LogDirectoryWatcher: A directory notification for 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Binaries/Win64' was aborted.
+[2017.07.10-03.15.50:980][578]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (246)
+[2017.07.10-03.15.50:991][578]LogModuleManager: Shutting down and abandoning module PhysXVehicles (244)
+[2017.07.10-03.15.50:991][578]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (242)
+[2017.07.10-03.15.50:991][578]LogModuleManager: Shutting down and abandoning module ImmediatePhysicsEditor (240)
+[2017.07.10-03.15.50:991][578]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (238)
+[2017.07.10-03.15.50:997][578]LogModuleManager: Shutting down and abandoning module UdpMessaging (236)
+[2017.07.10-03.15.51:098][578]LogModuleManager: Shutting down and abandoning module TcpMessaging (234)
+[2017.07.10-03.15.51:214][578]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (232)
+[2017.07.10-03.15.51:243][578]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (230)
+[2017.07.10-03.15.51:256][578]LogModuleManager: Shutting down and abandoning module FacialAnimation (228)
+[2017.07.10-03.15.51:256][578]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (226)
+[2017.07.10-03.15.51:260][578]LogModuleManager: Shutting down and abandoning module GraphEditor (225)
+[2017.07.10-03.15.51:310][578]LogModuleManager: Shutting down and abandoning module ContentBrowser (223)
+[2017.07.10-03.15.51:313][578]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (220)
+[2017.07.10-03.15.51:313][578]LogModuleManager: Shutting down and abandoning module Paper2D (218)
+[2017.07.10-03.15.51:323][578]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (216)
+[2017.07.10-03.15.51:324][578]LogModuleManager: Shutting down and abandoning module WmfMedia (214)
+[2017.07.10-03.15.51:332][578]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (212)
+[2017.07.10-03.15.51:332][578]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (210)
+[2017.07.10-03.15.51:361][578]LogModuleManager: Shutting down and abandoning module MediaAssets (208)
+[2017.07.10-03.15.51:361][578]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (206)
+[2017.07.10-03.15.51:378][578]LogModuleManager: Shutting down and abandoning module VREditor (204)
+[2017.07.10-03.15.51:383][578]LogModuleManager: Shutting down and abandoning module StringTableEditor (202)
+[2017.07.10-03.15.51:418][578]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (200)
+[2017.07.10-03.15.51:418][578]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (198)
+[2017.07.10-03.15.51:442][578]LogModuleManager: Shutting down and abandoning module FunctionalTesting (196)
+[2017.07.10-03.15.51:442][578]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (194)
+[2017.07.10-03.15.51:458][578]LogModuleManager: Shutting down and abandoning module UMG (192)
+[2017.07.10-03.15.51:466][578]LogModuleManager: Shutting down and abandoning module UMGEditor (191)
+[2017.07.10-03.15.51:518][578]LogModuleManager: Shutting down and abandoning module Sequencer (190)
+[2017.07.10-03.15.51:544][578]LogModuleManager: Shutting down and abandoning module AssetTools (188)
+[2017.07.10-03.15.51:586][578]LogModuleManager: Shutting down and abandoning module MessageLog (187)
+[2017.07.10-03.15.51:586][578]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (186)
+[2017.07.10-03.15.51:586][578]LogModuleManager: Shutting down and abandoning module SlateReflector (180)
+[2017.07.10-03.15.51:616][578]LogModuleManager: Shutting down and abandoning module Slate (178)
+[2017.07.10-03.15.51:616][578]LogModuleManager: Shutting down and abandoning module EditorStyle (176)
+[2017.07.10-03.15.51:628][578]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (174)
+[2017.07.10-03.15.51:628][578]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (172)
+[2017.07.10-03.15.51:628][578]LogModuleManager: Shutting down and abandoning module XAudio2 (170)
+[2017.07.10-03.15.51:628][578]LogModuleManager: Shutting down and abandoning module Networking (168)
+[2017.07.10-03.15.51:628][578]LogModuleManager: Shutting down and abandoning module Core (164)
+[2017.07.10-03.15.51:628][578]LogModuleManager: Shutting down and abandoning module AssetRegistry (162)
+[2017.07.10-03.15.51:917][578]LogDirectoryWatcher: A directory notification for '../../../Engine/Content/' was aborted.
+[2017.07.10-03.15.51:917][578]LogDirectoryWatcher: A directory notification for 'C:/Users/yugch/Documents/Unreal Projects/BasicEaters/Content/' was aborted.
+[2017.07.10-03.15.51:917][578]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/2D/Paper2D/Content/' was aborted.
+[2017.07.10-03.15.51:917][578]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/Runtime/GearVR/Content/' was aborted.
+[2017.07.10-03.15.51:941][578]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (161)
+[2017.07.10-03.15.51:946][578]LogModuleManager: Shutting down and abandoning module KismetCompiler (158)
+[2017.07.10-03.15.51:946][578]LogModuleManager: Shutting down and abandoning module LevelSequence (156)
+[2017.07.10-03.15.51:946][578]LogModuleManager: Shutting down and abandoning module PhysXFormats (154)
+[2017.07.10-03.15.51:946][578]LogModuleManager: Shutting down and abandoning module MeshUtilities (152)
+[2017.07.10-03.15.51:979][578]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (151)
+[2017.07.10-03.15.51:997][578]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (149)
+[2017.07.10-03.15.51:997][578]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (147)
+[2017.07.10-03.15.52:007][578]LogModuleManager: Shutting down and abandoning module DerivedDataCache (144)
+[2017.07.10-03.15.52:024][578]LogDerivedDataCache: Shutdown
+[2017.07.10-03.15.52:024][578]LogModuleManager: Shutting down and abandoning module TargetPlatform (142)
+[2017.07.10-03.15.52:025][578]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (141)
+[2017.07.10-03.15.52:039][578]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (139)
+[2017.07.10-03.15.52:049][578]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (137)
+[2017.07.10-03.15.52:057][578]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (135)
+[2017.07.10-03.15.52:067][578]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (133)
+[2017.07.10-03.15.52:082][578]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (131)
+[2017.07.10-03.15.52:082][578]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (129)
+[2017.07.10-03.15.52:082][578]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (127)
+[2017.07.10-03.15.52:082][578]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (125)
+[2017.07.10-03.15.52:093][578]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (123)
+[2017.07.10-03.15.52:093][578]LogModuleManager: Shutting down and abandoning module ImageWrapper (122)
+[2017.07.10-03.15.52:093][578]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (119)
+[2017.07.10-03.15.52:093][578]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (117)
+[2017.07.10-03.15.52:093][578]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (115)
+[2017.07.10-03.15.52:093][578]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (113)
+[2017.07.10-03.15.52:094][578]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (111)
+[2017.07.10-03.15.52:094][578]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (109)
+[2017.07.10-03.15.52:094][578]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (107)
+[2017.07.10-03.15.52:094][578]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (105)
+[2017.07.10-03.15.52:094][578]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (103)
+[2017.07.10-03.15.52:094][578]LogModuleManager: Shutting down and abandoning module Messaging (101)
+[2017.07.10-03.15.52:095][578]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (99)
+[2017.07.10-03.15.52:095][578]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (97)
+[2017.07.10-03.15.52:095][578]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (95)
+[2017.07.10-03.15.52:107][578]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (93)
+[2017.07.10-03.15.52:107][578]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (91)
+[2017.07.10-03.15.52:117][578]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (89)
+[2017.07.10-03.15.52:124][578]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (87)
+[2017.07.10-03.15.52:134][578]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (85)
+[2017.07.10-03.15.52:141][578]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (83)
+[2017.07.10-03.15.52:141][578]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (81)
+[2017.07.10-03.15.52:153][578]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (79)
+[2017.07.10-03.15.52:154][578]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (77)
+[2017.07.10-03.15.52:154][578]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (75)
+[2017.07.10-03.15.52:154][578]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (73)
+[2017.07.10-03.15.52:154][578]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (71)
+[2017.07.10-03.15.52:154][578]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (69)
+[2017.07.10-03.15.52:155][578]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (67)
+[2017.07.10-03.15.52:155][578]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (65)
+[2017.07.10-03.15.52:155][578]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (63)
+[2017.07.10-03.15.52:155][578]LogModuleManager: Shutting down and abandoning module InputCore (60)
+[2017.07.10-03.15.52:155][578]LogModuleManager: Shutting down and abandoning module Settings (58)
+[2017.07.10-03.15.52:155][578]LogModuleManager: Shutting down and abandoning module OculusRift (56)
+[2017.07.10-03.15.52:169][578]LogModuleManager: Shutting down and abandoning module GearVRController (54)
+[2017.07.10-03.15.52:169][578]LogModuleManager: Shutting down and abandoning module GearVR (52)
+[2017.07.10-03.15.52:183][578]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (50)
+[2017.07.10-03.15.52:183][578]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (48)
+[2017.07.10-03.15.52:183][578]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (44)
+[2017.07.10-03.15.52:183][578]LogOnline:Display: Unloading online subsystem: NULL
+[2017.07.10-03.15.52:224][578]LogModuleManager: Shutting down and abandoning module XMPP (43)
+[2017.07.10-03.15.52:249][578]LogModuleManager: Shutting down and abandoning module HTTP (41)
+[2017.07.10-03.15.52:249][578]LogHttp:Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2017.07.10-03.15.52:259][578]LogHttp:Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BFF1EA9C3-44CF-8118-7CE7-BFABC1865CEE%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.16.2-3514769%2B%2B%2BUE4%2BRelease-4.16&UserID=b79931d94361aeaf0cb278bf7ce92519%7C17ebd9a0cffe46b49d2a47c865b7d9e7%7Cafe8a177-b457-4ffb-a1ad-7ce8c85c507f&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2017.07.10-03.15.52:285][578]LogModuleManager: Shutting down and abandoning module SSL (40)
+[2017.07.10-03.15.52:303][578]LogModuleManager: Shutting down and abandoning module HTTPChunkInstaller (36)
+[2017.07.10-03.15.52:328][578]LogModuleManager: Shutting down and abandoning module AnimationModifiers (34)
+[2017.07.10-03.15.52:344][578]LogModuleManager: Shutting down and abandoning module PropertyEditor (33)
+[2017.07.10-03.15.52:344][578]LogModuleManager: Shutting down and abandoning module AudioEditor (30)
+[2017.07.10-03.15.52:368][578]LogModuleManager: Shutting down and abandoning module TextureCompressor (28)
+[2017.07.10-03.15.52:368][578]LogModuleManager: Shutting down and abandoning module ShaderCore (26)
+[2017.07.10-03.15.52:368][578]LogModuleManager: Shutting down and abandoning module Landscape (24)
+[2017.07.10-03.15.52:368][578]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (22)
+[2017.07.10-03.15.52:395][578]LogModuleManager: Shutting down and abandoning module OpenGLDrv (20)
+[2017.07.10-03.15.52:410][578]LogModuleManager: Shutting down and abandoning module D3D11RHI (18)
+[2017.07.10-03.15.52:410][578]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (16)
+[2017.07.10-03.15.52:415][578]LogModuleManager: Shutting down and abandoning module Renderer (14)
+[2017.07.10-03.15.52:415][578]LogModuleManager: Shutting down and abandoning module Engine (12)
+[2017.07.10-03.15.52:415][578]LogModuleManager: Shutting down and abandoning module CoreUObject (10)
+[2017.07.10-03.15.52:415][578]LogModuleManager: Shutting down and abandoning module NetworkFile (8)
+[2017.07.10-03.15.52:427][578]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2017.07.10-03.15.52:438][578]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
+[2017.07.10-03.15.52:438][578]LogModuleManager: Shutting down and abandoning module PakFile (2)
+[2017.07.10-03.15.52:450][578]LogExit: Exiting.
+[2017.07.10-03.15.52:501][578]Log file closed, 07/09/17 23:15:52
