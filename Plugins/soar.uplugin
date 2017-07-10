@@ -1,0 +1,18 @@
+{
+    "FileVersion" : 3,
+
+    "FriendlyName" : "Soar",
+    "Version" : 9.4.0,
+    "VersionName" : "9.4.0",
+    "Description" : "Creating Soar Agents in Unreal Engine",
+    "CanContainContent" : true,
+
+    "Modules" :
+    [
+        {
+            "Name" : "Soar",
+            "Type" : "Runtime",
+	    "LoadingPhase" : "PreDefault"
+        }
+    ]
+}

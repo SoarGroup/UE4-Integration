@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-SoarUE4Integration-6523.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-SoarUE4Integration-9276.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-SoarUE4Integration-6523.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-SoarUE4Integration-9276.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SoarUE4Integration-6523.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SoarUE4Integration-9276.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
