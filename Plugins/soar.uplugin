@@ -2,8 +2,8 @@
     "FileVersion" : 3,
 
     "FriendlyName" : "Soar",
-    "Version" : 9.4.0,
-    "VersionName" : "9.4.0",
+    "Version" : 9.6.0,
+    "VersionName" : "9.6.0",
     "Description" : "Creating Soar Agents in Unreal Engine",
     "CanContainContent" : true,
 
