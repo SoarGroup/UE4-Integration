@@ -6,16 +6,7 @@ using System.IO;
 
 public class SoarUE4Integration : ModuleRules
 {
-    private string ModulePath
-    {
-        get { return ModuleDirectory; }
-    }
-
-    private string ThirdPartyPath
-    {
-        get { return Path.GetFullPath(System.IO.Path.Combine(ModulePath, "../ThirdParty/Soar")); }
-    }
-
+ 
     public SoarUE4Integration(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
@@ -23,16 +14,6 @@ public class SoarUE4Integration : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
-        PublicIncludePaths.AddRange(new string[] {"ThirdParty/Soar/Include"});
-
-        
-
-
-        PublicLibraryPaths.Add(ThirdPartyPath);
-
-
-
-        PublicAdditionalLibraries.Add("Soar.lib");
        
         
         // Uncomment if you are using Slate UI

@@ -1,10 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MyText.h"
+<<<<<<< HEAD
+#include "sml_Client.h"
+=======
 
 #include "Soar_Agent.h"
 #include "Soar_Kernel.h"
 
+>>>>>>> 025c40a427a729d20c45aa3fc18b189e3d8dc982
 
 using namespace sml;
 
@@ -23,12 +27,18 @@ AMyText::AMyText()
 // Called when the game starts or when spawned
 void AMyText::BeginPlay()
 {
-  Soar_Kernel kernel;
-  Soar_Agent agent(kernel, "soar");
+<<<<<<< HEAD
+	Kernel *k = Kernel::CreateKernelInNewThread();
+	Agent *a = k->CreateAgent("soar");
+	MyText->SetText(a->ExecuteCommandLine("echo Hello World"));
+=======
+  Soar_Kernel::Pointer kernel = Soar_Kernel::Create();
+  Soar_Agent::Pointer agent = Soar_Agent::Create(kernel, "soar");
 	//Kernel *k = Kernel::CreateKernelInNewThread();
 	//Agent *a = k->CreateAgent("soar");
 
-	MyText->SetText(agent->ExecuteCommandLine("echo Hello World"));
+	MyText->SetText((*agent)->ExecuteCommandLine("echo Hello World"));
+>>>>>>> 025c40a427a729d20c45aa3fc18b189e3d8dc982
 	
 	
 	Super::BeginPlay();

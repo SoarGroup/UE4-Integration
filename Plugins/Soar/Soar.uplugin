@@ -1,0 +1,17 @@
+{
+    "FileVersion" : 3,
+
+    "FriendlyName" : "Soar",
+    "Version" : 1,
+    "FriendlyVersion" : "1.0",
+    "Description" : "A plugin for the Soar Library",
+    "Category" : "Plugin",
+
+    "Modules" :
+    [
+        {
+            "Name" : "Soar",
+            "Type" : "Developer"
+        }
+    ]
+}
