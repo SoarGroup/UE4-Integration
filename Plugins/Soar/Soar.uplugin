@@ -1,17 +1,23 @@
 {
-    "FileVersion" : 3,
-
-    "FriendlyName" : "Soar",
-    "Version" : 1,
-    "FriendlyVersion" : "1.0",
-    "Description" : "A plugin for the Soar Library",
-    "Category" : "Plugin",
-
-    "Modules" :
-    [
-        {
-            "Name" : "Soar",
-            "Type" : "Developer"
-        }
-    ]
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Soar",
+	"Description": "Soar is a general cognitive architecture for developing systems that exhibit intelligent behavior.",
+	"Category": "Other",
+	"CreatedBy": "The Soar Group",
+	"CreatedByURL": "https://soar.eecs.umich.edu/",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Soar",
+			"Type": "Developer",
+			"LoadingPhase": "Default"
+		}
+	]
 }

@@ -1,3 +1,0 @@
-C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Source\BasicEaters\BasicEaters.Build.cs
-C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Source\BasicEaters.Target.cs
-C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Source\BasicEatersEditor.Target.cs
