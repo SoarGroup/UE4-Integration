@@ -1,0 +1,3 @@
+C:\Users\yugch\Documents\SOAR Stuff\UE4-Integration-master\Eaters Game\BasicEaters\Source\BasicEaters\BasicEaters.Build.cs
+C:\Users\yugch\Documents\SOAR Stuff\UE4-Integration-master\Eaters Game\BasicEaters\Source\BasicEaters.Target.cs
+C:\Users\yugch\Documents\SOAR Stuff\UE4-Integration-master\Eaters Game\BasicEaters\Source\BasicEatersEditor.Target.cs

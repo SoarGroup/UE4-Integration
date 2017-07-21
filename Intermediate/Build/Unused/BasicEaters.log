@@ -1,0 +1,13 @@
+﻿  Compiling game modules for hot reload
+  Parsing headers for BasicEatersEditor
+    Running UnrealHeaderTool "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\BasicEaters.uproject" "C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\BasicEatersEditor\Development\BasicEatersEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for BasicEatersEditor in 5.2445735 seconds
+  Performing 4 actions (2 in parallel)
+  BasicEaters.generated.cpp
+  Eater1.cpp
+  [3/4] Link UE4Editor-BasicEaters-4644.dll
+  [4/4] Link UE4Editor-BasicEaters-4644.lib
+     Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4644.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4644.exp
+     Creating library C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4644.suppressed.lib and object C:\Users\yugch\Documents\Unreal Projects\BasicEaters\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BasicEaters-4644.suppressed.exp
+  Deploying BasicEatersEditor Win64 Development...
+  Total build time: 12.61 seconds (Local executor: 3.76 seconds)
