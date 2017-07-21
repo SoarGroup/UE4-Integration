@@ -2,8 +2,31 @@
 
 #include "Eater1.h"
 #include "Field.h"
+#include <stdlib.h>
 
+int locationX = rand() % 14;
+int locationY = rand() % 14;
 
+char Field[15][15] =
+{
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+	{u, u, u, u, u, u, u, u, u, u, u, u, u, u, u}
+}
+
+Field[locationX][locationY] = 'e';
 
 // Sets default values
 AEater1::AEater1()
@@ -72,6 +95,55 @@ void AEater1::Tick(float DeltaTime)
 			NewLocation += GetActorForwardVector() * MovementInput.X * DeltaTime;
 			NewLocation += GetActorRightVector() * MovementInput.Y * DeltaTime;
 			SetActorLocation(NewLocation);
+		}
+	}
+
+	if (W pressed)
+	{
+		Field[locationX][locationY] = 'u';
+		if (locationY != 14)
+		{
+			locationY += locationY;
+		}
+		else
+		{
+			ErrorHandlingCodeHere
+		}
+	}
+	if (S pressed)
+	{
+		Field[locationX][locationY] = 'u';
+		if (locationY != 0)
+		{
+			locationY -= locationY;
+		}
+		else
+		{
+			ErrorHandlingCodeHere
+		}
+	}
+	if (D pressed)
+	{
+		Field[locationX][locationY] = 'u';
+		if (locationX != 14)
+		{
+			locationX += locationX;
+		}
+		else
+		{
+			ErrorHandlingCodeHere
+		}
+	}
+	if (A pressed)
+	{
+		Field[locationX][locationY] = 'u';
+		if (locationX != 0)
+		{
+			locationX -= locationX;
+		}
+		else
+		{
+			ErrorHandlingCodeHere
 		}
 	}
 }
