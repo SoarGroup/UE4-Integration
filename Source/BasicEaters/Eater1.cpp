@@ -104,6 +104,7 @@ void AEater1::Tick(float DeltaTime)
 		if (locationY != 14)
 		{
 			locationY += locationY;
+			Field[locationX][locationY] = 'e';
 		}
 		else
 		{
@@ -116,6 +117,7 @@ void AEater1::Tick(float DeltaTime)
 		if (locationY != 0)
 		{
 			locationY -= locationY;
+			Field[locationX][locationY] = 'e';
 		}
 		else
 		{
@@ -128,6 +130,7 @@ void AEater1::Tick(float DeltaTime)
 		if (locationX != 14)
 		{
 			locationX += locationX;
+			Field[locationX][locationY] = 'e';
 		}
 		else
 		{
@@ -140,6 +143,7 @@ void AEater1::Tick(float DeltaTime)
 		if (locationX != 0)
 		{
 			locationX -= locationX;
+			Field[locationX][locationY] = 'e';
 		}
 		else
 		{
