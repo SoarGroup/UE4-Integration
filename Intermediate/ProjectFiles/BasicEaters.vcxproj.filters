@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\BasicEaters.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{02C8A843-5583-4026-9643-E81D4926A19C}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BasicEaters.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\BasicEatersEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{A5253EDE-5494-4BCB-B089-4E14FAC617A0}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\BasicEaters">
+			<UniqueIdentifier>{8A39010B-A064-4C5F-A95B-2DAB1BD6156A}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BasicEaters\BasicEaters.Build.cs">
+			<Filter>Source\BasicEaters</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\BasicEaters\BasicEaters.cpp">
+			<Filter>Source\BasicEaters</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BasicEaters\BasicEaters.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BasicEaters\BasicEatersGameModeBase.cpp">
+			<Filter>Source\BasicEaters</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BasicEaters\BasicEatersGameModeBase.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BasicEaters\BonusFoodPellet.cpp">
+			<Filter>Source\BasicEaters</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BasicEaters\BonusFoodPellet.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BasicEaters\Eater1.cpp">
+			<Filter>Source\BasicEaters</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BasicEaters\Eater1.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BasicEaters\NormalFoodPellets.cpp">
+			<Filter>Source\BasicEaters</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BasicEaters\NormalFoodPellets.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BasicEaters\Wall.cpp">
+			<Filter>Source\BasicEaters</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BasicEaters\Wall.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
