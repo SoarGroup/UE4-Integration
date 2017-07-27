@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BASICEATERS_Wall_generated_h
 
-#define BasicEaters_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS
-#define BasicEaters_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define BasicEaters_Source_BasicEaters_Wall_h_12_INCLASS_NO_PURE_DECLS \
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWall(); \
 	friend BASICEATERS_API class UClass* Z_Construct_UClass_AWall(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define BasicEaters_Source_BasicEaters_Wall_h_12_INCLASS \
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesAWall(); \
 	friend BASICEATERS_API class UClass* Z_Construct_UClass_AWall(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define BasicEaters_Source_BasicEaters_Wall_h_12_STANDARD_CONSTRUCTORS \
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWall(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWall) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define BasicEaters_Source_BasicEaters_Wall_h_12_ENHANCED_CONSTRUCTORS \
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AWall(AWall&&); \
@@ -59,32 +59,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AWall); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWall)
 
 
-#define BasicEaters_Source_BasicEaters_Wall_h_12_PRIVATE_PROPERTY_OFFSET
-#define BasicEaters_Source_BasicEaters_Wall_h_9_PROLOG
-#define BasicEaters_Source_BasicEaters_Wall_h_12_GENERATED_BODY_LEGACY \
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_PRIVATE_PROPERTY_OFFSET
+#define UE4_Integration_Source_BasicEaters_Wall_h_9_PROLOG
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BasicEaters_Source_BasicEaters_Wall_h_12_PRIVATE_PROPERTY_OFFSET \
-	BasicEaters_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS \
-	BasicEaters_Source_BasicEaters_Wall_h_12_INCLASS \
-	BasicEaters_Source_BasicEaters_Wall_h_12_STANDARD_CONSTRUCTORS \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_PRIVATE_PROPERTY_OFFSET \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_INCLASS \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define BasicEaters_Source_BasicEaters_Wall_h_12_GENERATED_BODY \
+#define UE4_Integration_Source_BasicEaters_Wall_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BasicEaters_Source_BasicEaters_Wall_h_12_PRIVATE_PROPERTY_OFFSET \
-	BasicEaters_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	BasicEaters_Source_BasicEaters_Wall_h_12_INCLASS_NO_PURE_DECLS \
-	BasicEaters_Source_BasicEaters_Wall_h_12_ENHANCED_CONSTRUCTORS \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_PRIVATE_PROPERTY_OFFSET \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_INCLASS_NO_PURE_DECLS \
+	UE4_Integration_Source_BasicEaters_Wall_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID BasicEaters_Source_BasicEaters_Wall_h
+#define CURRENT_FILE_ID UE4_Integration_Source_BasicEaters_Wall_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

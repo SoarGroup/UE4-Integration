@@ -24,5 +24,17 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	float RunningTime;
+
+	UPROPERTY(EditAnywhere)
+		USceneComponent* PickupRoot;
+
+	UPROPERTY(EditAnywhere)
+		UStaticMeshComponent* PickupMesh;
 	
+	UPROPERTY(EditAnywhere)
+		UShapeComponent* PickupBox;
+
+	UFUNCTION()
+		void OnPlayerEnterPickupBox(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
 };

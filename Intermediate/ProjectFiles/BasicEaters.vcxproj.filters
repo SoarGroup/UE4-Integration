@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<None Include="..\..\BasicEaters.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{02C8A843-5583-4026-9643-E81D4926A19C}</UniqueIdentifier>
+			<UniqueIdentifier>{BCB14A48-2521-4EAD-9599-C90000EC2939}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BasicEaters.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{A5253EDE-5494-4BCB-B089-4E14FAC617A0}</UniqueIdentifier>
+			<UniqueIdentifier>{EBA825FF-04DB-43A0-8080-BC66066E3078}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -24,8 +24,11 @@
 		<None Include="..\..\Config\DefaultGame.ini">
 			<Filter>Config</Filter>
 		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
 		<Filter Include="Source\BasicEaters">
-			<UniqueIdentifier>{8A39010B-A064-4C5F-A95B-2DAB1BD6156A}</UniqueIdentifier>
+			<UniqueIdentifier>{28CA521C-515F-4D33-BBD4-39EC134CD7DE}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BasicEaters\BasicEaters.Build.cs">
 			<Filter>Source\BasicEaters</Filter>
@@ -52,6 +55,9 @@
 			<Filter>Source\BasicEaters</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\BasicEaters\Eater1.h">
+			<Filter>Source\BasicEaters</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\BasicEaters\Field.h">
 			<Filter>Source\BasicEaters</Filter>
 		</ClInclude >
 		<ClCompile Include="..\..\Source\BasicEaters\NormalFoodPellets.cpp">

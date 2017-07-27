@@ -1,3 +1,3 @@
-C:\Users\yugch\Documents\SOAR Stuff\UE4-Integration-master\Eaters Game\BasicEaters\Source\BasicEaters\BasicEaters.Build.cs
-C:\Users\yugch\Documents\SOAR Stuff\UE4-Integration-master\Eaters Game\BasicEaters\Source\BasicEaters.Target.cs
-C:\Users\yugch\Documents\SOAR Stuff\UE4-Integration-master\Eaters Game\BasicEaters\Source\BasicEatersEditor.Target.cs
+C:\Users\pt\Documents\GitHub\UE4-Integration\Source\BasicEaters\BasicEaters.Build.cs
+C:\Users\pt\Documents\GitHub\UE4-Integration\Source\BasicEaters.Target.cs
+C:\Users\pt\Documents\GitHub\UE4-Integration\Source\BasicEatersEditor.Target.cs

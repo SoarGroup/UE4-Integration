@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Soar.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h.obj"
+"C:\Users\pt\Documents\GitHub\UE4-Integration\Plugins\Soar\Intermediate\Build\Win64\UE4Editor\Development\Soar\Module.Soar.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Soar\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\pt\Documents\GitHub\UE4-Integration\Plugins\Soar\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Soar.lib"
