@@ -39,27 +39,19 @@ void ABonusFoodPelletController::bonusFoodPelletSpawnerFunction()
 	spawnLocation.Y = generateY();
 	spawnLocation.Z = 0.f;
 
-
-	FString arrayLocation = FString(TEXT("b") + FString::FromInt(spawnLocation.X) + FString::FromInt(spawnLocation.Y));
-	int b = 0;
-	while (b < FDGI->FieldData.Num()) {
-		FString tempLocation = FDGI->FieldData[b];
-		tempLocation.RemoveAt(0, 1, true);
-		FString tempArrayLocation = arrayLocation;
-		tempArrayLocation.RemoveAt(0, 1, true);
-		if (tempArrayLocation == tempLocation) {
-			spawnLocation.X = generateX();
-			spawnLocation.Y = generateY();
-			FString arrayLocation = FString(TEXT("b") + FString::FromInt(spawnLocation.X) + FString::FromInt(spawnLocation.Y));
-			int b = 0;
-		}
-		else
-		{
-			b++;
-		}
+	int arrayLocationX = spawnLocation.X / 200 + 7;
+	int arrayLocationY = spawnLocation.Y / 200 + 7;
+	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
+	
+	while (FDGI->FieldData[arrayIndex] != "u") {
+		spawnLocation.X = generateX();
+		spawnLocation.Y = generateY();
+		arrayLocationX = spawnLocation.X / 200 + 7;
+		arrayLocationY = spawnLocation.Y / 200 + 7;
+		arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	}
-
-	FDGI->FieldData.Add(arrayLocation);
+	FString arrayObject = FString(TEXT("b"));
+	FDGI->FieldData[arrayIndex] = arrayObject;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;
@@ -83,7 +75,7 @@ void ABonusFoodPelletController::BeginPlay()
 {
 	Super::BeginPlay();
 	bonusFoodPelletGenerator();
-	UE_LOG(LogTemp, Log, TEXT("PELLET BOOL"));
+	UE_LOG(LogTemp, Log, TEXT("BONUS FOOD PELLET"));
 }
 
 

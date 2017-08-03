@@ -4,5 +4,5 @@
 
 UFieldData::UFieldData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-
+	FieldData.Init("u", 255);
 }

@@ -43,8 +43,24 @@ void AWallController::wallSpawnerFunction(int xLocation, int yLocation)
 
 	//adds the location of the wall to a global array found in GameInstance in the format of "[object identifier][xlocation][ylocation]". Z location is superfluous because it is constant for all actors
 	//"w" identifier is for wall, "e" for eater, "n" for normal food pellet, "b" for bonus food pellet
-	FString arrayLocation = FString(TEXT("w") + FString::FromInt(xLocation) + FString::FromInt(yLocation));
-	FDGI->FieldData.Add(arrayLocation);
+	
+	//FString arrayLocation = FString(TEXT("w") + FString::FromInt(xLocation) + FString::FromInt(yLocation));
+	//FDGI->FieldData.Add(arrayLocation);
+
+	int arrayLocationX = spawnLocation.X / 200 + 7;
+	int arrayLocationY = spawnLocation.Y / 200 + 7;
+	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
+
+	while (FDGI->FieldData[arrayIndex] != "u") {
+		
+		spawnLocation.X = generateX();
+		spawnLocation.Y = generateY();
+		arrayLocationX = spawnLocation.X / 200 + 7;
+		arrayLocationY = spawnLocation.Y / 200 + 7;
+		arrayIndex = 15 * arrayLocationX + arrayLocationY;
+	}
+	FString arrayObject = FString(TEXT("w"));
+	FDGI->FieldData[arrayIndex] = arrayObject;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;
@@ -149,9 +165,8 @@ void AWallController::BeginPlay()
 	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 
 	wallGenerator();
+	UE_LOG(LogTemp, Log, TEXT("WALL"));
 
-
-	UE_LOG(LogTemp, Log, TEXT("WALL BOOL"));
 
 }
 
