@@ -8,16 +8,19 @@ ANormalFoodPelletController::ANormalFoodPelletController()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	
 
 }
 
 // Called when the game starts or when spawned
 void ANormalFoodPelletController::BeginPlay()
 {
+	
 	Super::BeginPlay();
-	//normalFoodPelletGenerator();
-	UE_LOG(LogTemp, Log, TEXT("NORMAL FOOD PELLET"));
-
+	
+	normalFoodPelletGenerator();
+	
 }
 
 
@@ -56,8 +59,10 @@ void ANormalFoodPelletController::normalFoodPelletGenerator()
 		if (FDGI->FieldData[i] == "u")
 		{
 			normalFoodPelletSpawnerFunction( (200*(((i-(i%15))/15)-7)),(200*((i%15)-7)));
+			
 		}
 	}
+	
 }
 
 // Called every frame

@@ -37,6 +37,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Spawning Object")
 		TSubclassOf<AWall> spawningObject;
 
+	
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
