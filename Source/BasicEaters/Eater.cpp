@@ -6,7 +6,7 @@
 // Sets default values
 AEater::AEater()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 }
@@ -67,10 +67,12 @@ void AEater::MoveUp(float value)
 	if ((Controller != NULL) && (value != 0.0f))
 	{
 		UE_LOG(LogTemp, Log, TEXT("Up!"));
-
+		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 		FVector actorLocation = GetActorLocation();
+		
 		actorLocation.X += 200;
-		if (actorLocation.X != 1600)
+		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 +7);
+		if ((actorLocation.X != 1600) && (FDGI->FieldData[arrayIndex] != "w"))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
 			SetActorLocation(actorLocation, false);
@@ -85,11 +87,14 @@ void AEater::MoveDown(float value)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Down!"));
 
+		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 		FVector actorLocation = GetActorLocation();
+
 		actorLocation.X -= 200;
-		if (actorLocation.X != -1600)
+		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 + 7);
+		if ((actorLocation.X != -1600) && (FDGI->FieldData[arrayIndex] != "w"))
 		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
+			UE_LOG(LogTemp, Log, TEXT("Still Moving Down!!"));
 			SetActorLocation(actorLocation, false);
 		}
 	}
@@ -101,11 +106,14 @@ void AEater::MoveLeft(float value)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Left!"));
 
+		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 		FVector actorLocation = GetActorLocation();
+
 		actorLocation.Y -= 200;
-		if (actorLocation.Y != -1600)
+		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 + 7);
+		if ((actorLocation.Y != -1600) && (FDGI->FieldData[arrayIndex] != "w"))
 		{
-			
+			UE_LOG(LogTemp, Log, TEXT("Still Moving Left!!"));
 			SetActorLocation(actorLocation, false);
 		}
 	}
@@ -115,13 +123,16 @@ void AEater::MoveRight(float value)
 {
 	if ((Controller != NULL) && (value != 0.0f))
 	{
-		UE_LOG(LogTemp, Log, TEXT("Right!");
+		
 
+		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 		FVector actorLocation = GetActorLocation();
+
 		actorLocation.Y += 200;
-		if (actorLocation.Y != 1600)
+		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 + 7);
+		if ((actorLocation.Y != 1600) && (FDGI->FieldData[arrayIndex] != "w"))
 		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
+			UE_LOG(LogTemp, Log, TEXT("Still Moving Left!!"));
 			SetActorLocation(actorLocation, false);
 		}
 	}
@@ -151,4 +162,3 @@ void AEater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("MoveRight", this, &AEater::MoveRight);
 
 }
-
