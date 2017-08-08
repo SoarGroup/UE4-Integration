@@ -164,6 +164,7 @@ void AWallController::BeginPlay()
 	//retrieves GameInstance to access array
 	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 
+	
 	wallGenerator();
 	UE_LOG(LogTemp, Log, TEXT("WALL"));
 

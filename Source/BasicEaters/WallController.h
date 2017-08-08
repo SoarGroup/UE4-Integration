@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "FieldData.h"
+#include "EngineUtils.h"
 #include "Wall.h"
 #include "WallController.generated.h"
 using namespace std;

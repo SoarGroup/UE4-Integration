@@ -3,6 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ConstructorHelpers.h"
+#include "Components/SphereComponent.h"
+#include "Wall.h"
+#include "CoreUObject.h"
 #include "GameFramework/Actor.h"
 #include "NormalFoodPellet.generated.h"
 
@@ -13,7 +17,13 @@ class BASICEATERS_API ANormalFoodPellet : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	ANormalFoodPellet();
+	ANormalFoodPellet(const FObjectInitializer& objectInitializer);
+
+	USphereComponent* _collision;
+
+
+	UFUNCTION()
+	void OnFoodPelletOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 
 protected:
 	// Called when the game starts or when spawned

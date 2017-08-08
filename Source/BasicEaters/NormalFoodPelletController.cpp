@@ -35,7 +35,7 @@ void ANormalFoodPelletController::normalFoodPelletSpawnerFunction(int xLocation,
 	//generates vector for spawning
 	spawnLocation.X = xLocation;
 	spawnLocation.Y = yLocation;
-	spawnLocation.Z = 0.f;
+	spawnLocation.Z = 50;
 
 	int arrayLocationX = spawnLocation.X / 200 + 7;
 	int arrayLocationY = spawnLocation.Y / 200 + 7;
