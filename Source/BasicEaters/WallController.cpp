@@ -57,13 +57,21 @@ void AWallController::generateInXDirection(int number) {
 	int initialXLocation = generateX();
 	int initialYLocation = generateY();
 
+	//creates the wall
+	wallSpawnerFunction(initialXLocation, initialYLocation);
+
+	//chooses which direction along x axis to move
+	int direction = FMath::RandRange(1, 2);
+
 	//loops wallSpawner function based on location, direction, and number of desired wall actors
 	for (int i = 0; i < number; i++)
 	{
-		if (initialXLocation == FieldData::get().grid_size || initialXLocation == FieldData::get().grid_size)
+		if (initialXLocation == -1 || initialXLocation == FieldData::get().grid_size)
       break;
 
-    wallSpawnerFunction(initialXLocation++, initialYLocation);
+    wallSpawnerFunction(initialXLocation, initialYLocation);
+
+    initialXLocation += direction == 1 ? -1 : 1;
 	}
 
 
@@ -76,12 +84,19 @@ void AWallController::generateInYDirection(int number) {
 	int initialXLocation = generateX();
 	int initialYLocation = generateY();
 
+	number = number - 1;
+
+	wallSpawnerFunction(initialXLocation, initialYLocation);
+	int direction = FMath::RandRange(1, 2);
+
 	for (int i = 0; i < number; i++)
 	{
-		if (initialYLocation == FieldData::get().grid_size || initialYLocation == FieldData::get().grid_size)
+		if (initialYLocation == -1 || initialYLocation == FieldData::get().grid_size)
       break;
 
-    wallSpawnerFunction(initialXLocation, initialYLocation++);
+    wallSpawnerFunction(initialXLocation, initialYLocation);
+
+    initialYLocation += direction == 1 ? -1 : 1;
 	}
 }
 

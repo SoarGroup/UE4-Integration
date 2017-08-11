@@ -53,18 +53,18 @@ void AEater::eaterSpawnerFunction(int arrayLocationX, int arrayLocationY)
 	SetActorLocation(spawnLocation, false);
 }
 
-void AEater::MoveUp(float value)
+void AEater::MoveUp()
 {
-	if ((Controller != NULL) && (value != 0.0f))
+	if (Controller != NULL)
 	{
 
 		UE_LOG(LogTemp, Log, TEXT("Up!"));
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 		
-    int arrayLocationX = fieldData.eater_pos.first;
-    int arrayLocationY = fieldData.eater_pos.second + 1;
-		if (arrayLocationY != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    int arrayLocationX = fieldData.eater_pos.first + 1;
+    int arrayLocationY = fieldData.eater_pos.second;
+		if (arrayLocationX != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
@@ -79,18 +79,18 @@ void AEater::MoveUp(float value)
 
 }
 
-void AEater::MoveDown(float value)
+void AEater::MoveDown()
 {
-	if ((Controller != NULL) && (value != 0.0f))
+	if (Controller != NULL)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Down!"));
 
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
-    int arrayLocationX = fieldData.eater_pos.first;
-    int arrayLocationY = fieldData.eater_pos.second - 1;
-    if (arrayLocationY != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    int arrayLocationX = fieldData.eater_pos.first - 1;
+    int arrayLocationY = fieldData.eater_pos.second;
+    if (arrayLocationX != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving DOWN!!"));
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
@@ -104,18 +104,18 @@ void AEater::MoveDown(float value)
 	}
 }
 
-void AEater::MoveLeft(float value)
+void AEater::MoveLeft()
 {
-	if ((Controller != NULL) && (value != 0.0f))
+	if (Controller != NULL)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Left!"));
 
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
-    int arrayLocationX = fieldData.eater_pos.first - 1;
-    int arrayLocationY = fieldData.eater_pos.second;
-    if (arrayLocationX != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    int arrayLocationX = fieldData.eater_pos.first;
+    int arrayLocationY = fieldData.eater_pos.second - 1;
+    if (arrayLocationY != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
     {
       UE_LOG(LogTemp, Log, TEXT("Still Moving LEFT!!"));
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
@@ -129,16 +129,16 @@ void AEater::MoveLeft(float value)
 	}
 }
 
-void AEater::MoveRight(float value)
+void AEater::MoveRight()
 {
-	if ((Controller != NULL) && (value != 0.0f))
+	if (Controller != NULL)
 	{
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
-    int arrayLocationX = fieldData.eater_pos.first + 1;
-    int arrayLocationY = fieldData.eater_pos.second;
-    if (arrayLocationX != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    int arrayLocationX = fieldData.eater_pos.first;
+    int arrayLocationY = fieldData.eater_pos.second + 1;
+    if (arrayLocationY != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
     {
       UE_LOG(LogTemp, Log, TEXT("Still Moving RIGHT!!"));
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
@@ -170,9 +170,9 @@ void AEater::Tick(float DeltaTime)
 void AEater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	PlayerInputComponent->BindAxis("MoveRight", this, &AEater::MoveUp);
-	PlayerInputComponent->BindAxis("MoveLeft", this, &AEater::MoveDown);
-	PlayerInputComponent->BindAxis("MoveDown", this, &AEater::MoveLeft);
-	PlayerInputComponent->BindAxis("MoveUp", this, &AEater::MoveRight);
+  PlayerInputComponent->BindAction("Front", IE_Pressed, this, &AEater::MoveUp);
+  PlayerInputComponent->BindAction("Back", IE_Pressed, this, &AEater::MoveDown);
+  PlayerInputComponent->BindAction("Right", IE_Pressed, this, &AEater::MoveRight);
+  PlayerInputComponent->BindAction("Left", IE_Pressed, this, &AEater::MoveLeft);
 
 }

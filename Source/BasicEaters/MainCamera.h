@@ -16,5 +16,4 @@ class BASICEATERS_API AMainCamera : public ACameraActor
 	
 	
 	
-	
 };

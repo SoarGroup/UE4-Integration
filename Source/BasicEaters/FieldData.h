@@ -25,6 +25,8 @@ public:
     Item item = Item::PELLET;
 
     void clear_object() {
+      /// TODO
+      //unrealObject->Destroy();
       unrealObject = nullptr;
     }
 
@@ -49,10 +51,15 @@ public:
 
   static FieldData & get();
 
+  void reset();
+
   static const size_t grid_size = 15;
   static const int render_scaling_factor = 200;
 
   std::array<std::array<Cell, grid_size>, grid_size> cells;
   std::pair<int, int> eater_pos;
   int eater_score = 0;
+
+private:
+  bool bStartup = true;
 };

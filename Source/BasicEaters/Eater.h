@@ -22,16 +22,16 @@ public:
 	void eaterSpawnerFunction(int xLocation, int yLocation);
 
 	UFUNCTION()
-	void MoveUp(float value);
+	void MoveUp();
 
 	UFUNCTION()
-		void MoveDown(float value);
+		void MoveDown();
 
 	UFUNCTION()
-		void MoveLeft(float value);
+		void MoveLeft();
 
 	UFUNCTION()
-		void MoveRight(float value);
+		void MoveRight();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

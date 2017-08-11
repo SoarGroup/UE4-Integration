@@ -59,9 +59,9 @@ void AEaterController::eaterSpawnerFunction(int arrayLocationX, int arrayLocatio
 // Called when the game starts or when spawned
 void AEaterController::BeginPlay()
 {
-	Super::BeginPlay();
-	UE_LOG(LogTemp, Log, TEXT("Eater working"));
-	eaterSpawnerFunction(generateX(), generateY());
+  Super::BeginPlay();
+  UE_LOG(LogTemp, Log, TEXT("Eater working"));
+  eaterSpawnerFunction(generateX(), generateY());
 }
 
 // Called every frame
