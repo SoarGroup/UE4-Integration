@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "NormalFoodPellet.h"
-
+#include "Eater.h"
 
 // Sets default values
 ANormalFoodPellet::ANormalFoodPellet(const FObjectInitializer& objectInitializer)
@@ -25,9 +25,10 @@ ANormalFoodPellet::ANormalFoodPellet(const FObjectInitializer& objectInitializer
 
 
 void ANormalFoodPellet::OnFoodPelletOverlap(AActor* MyOverlappedActor, AActor* OtherActor) {
-	if (!OtherActor->IsA(ANormalFoodPellet::StaticClass())) {
-		Destroy();
-	}
+  // TODO: Fix this
+	//if (!OtherActor->IsA(ANormalFoodPellet::StaticClass())) {
+	//	Destroy();
+	//}
 }
 
 

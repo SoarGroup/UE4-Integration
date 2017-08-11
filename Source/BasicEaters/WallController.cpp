@@ -16,9 +16,7 @@ AWallController::AWallController()
 int AWallController::generateX()
 {
 	int initialX = 0.f;
-	initialX = FMath::RandRange(-7, 7);
-	// we have a 3000px x 3000px playing field. since we want it to be 15x15, we must divide the field into 255 200px x 200px squares. -7 to 7 allows 15 squares (including 0). this function generates the x coordinate
-	initialX = 200 * initialX;
+	initialX = FMath::RandRange(0, FieldData::get().grid_size - 1);
 	return initialX;
 }
 
@@ -26,21 +24,15 @@ int AWallController::generateY()
 {
 	//same as generateX(), but for the y coordinate
 	int initialY = 0.f;
-	initialY = FMath::RandRange(-7, 7);
-	initialY = 200 * initialY;
+	initialY = FMath::RandRange(0, FieldData::get().grid_size - 1);
 	return initialY;
 }
 
 
-void AWallController::wallSpawnerFunction(int xLocation, int yLocation)
+void AWallController::wallSpawnerFunction(int arrayLocationX, int arrayLocationY)
 {
 	//begins by getting GameInstance so that the location can be added
   FieldData &fieldData = FieldData::get();
-
-	//generates vector for spawning
-	spawnLocation.X = xLocation;
-	spawnLocation.Y = yLocation;
-	spawnLocation.Z = 0.f;
 
 	//adds the location of the wall to a global array found in GameInstance in the format of "[object identifier][xlocation][ylocation]". Z location is superfluous because it is constant for all actors
 	//"w" identifier is for wall, "e" for eater, "n" for normal food pellet, "b" for bonus food pellet
@@ -48,17 +40,16 @@ void AWallController::wallSpawnerFunction(int xLocation, int yLocation)
 	//FString arrayLocation = FString(TEXT("w") + FString::FromInt(xLocation) + FString::FromInt(yLocation));
 	//FDGI->FieldData.Add(arrayLocation);
 
-	int arrayLocationX = spawnLocation.X / 200 + 7;
-	int arrayLocationY = spawnLocation.Y / 200 + 7;
-	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
-
   fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::WALL;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;
 	spawnParams.Owner = this;
 	spawnParams.Instigator = Instigator;
+  FVector spawnLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
 	AWall* newWall = GetWorld()->SpawnActor<AWall>(spawningObject, spawnLocation, FRotator::ZeroRotator, spawnParams);
+
+  fieldData.cells[arrayLocationX][arrayLocationY].set_object(newWall);
 }
 
 void AWallController::generateInXDirection(int number) {
@@ -66,31 +57,13 @@ void AWallController::generateInXDirection(int number) {
 	int initialXLocation = generateX();
 	int initialYLocation = generateY();
 
-	//creates the wall
-	wallSpawnerFunction(initialXLocation, initialYLocation);
-
-	//chooses which direction along x axis to move
-	int direction = FMath::RandRange(1, 2);
-
 	//loops wallSpawner function based on location, direction, and number of desired wall actors
 	for (int i = 0; i < number; i++)
 	{
-		if (initialXLocation == 1400 || initialXLocation == -1400)
-		{
-			direction = 0;
-			//if the wall is at the edge of the playing field, stop it from creating more
-		}
+		if (initialXLocation == FieldData::get().grid_size || initialXLocation == FieldData::get().grid_size)
+      break;
 
-		if (direction == 1)
-		{
-			initialXLocation = initialXLocation - 200;
-			wallSpawnerFunction(initialXLocation, initialYLocation);
-		}
-		else if (direction == 2)
-		{
-			initialXLocation = initialXLocation + 200;
-			wallSpawnerFunction(initialXLocation, initialYLocation);
-		}
+    wallSpawnerFunction(initialXLocation++, initialYLocation);
 	}
 
 
@@ -103,28 +76,12 @@ void AWallController::generateInYDirection(int number) {
 	int initialXLocation = generateX();
 	int initialYLocation = generateY();
 
-	number = number - 1;
-
-	wallSpawnerFunction(initialXLocation, initialYLocation);
-	int direction = FMath::RandRange(1, 2);
-
 	for (int i = 0; i < number; i++)
 	{
-		if (initialYLocation == 1400 || initialYLocation == -1400)
-		{
-			direction = 0;
-		}
+		if (initialYLocation == FieldData::get().grid_size || initialYLocation == FieldData::get().grid_size)
+      break;
 
-		if (direction == 1)
-		{
-			initialYLocation = initialYLocation - 200;
-			wallSpawnerFunction(initialXLocation, initialYLocation);
-		}
-		else if (direction == 2)
-		{
-			initialYLocation = initialYLocation + 200;
-			wallSpawnerFunction(initialXLocation, initialYLocation);
-		}
+    wallSpawnerFunction(initialXLocation, initialYLocation++);
 	}
 }
 

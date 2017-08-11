@@ -15,9 +15,7 @@ ABonusFoodPelletController::ABonusFoodPelletController()
 int ABonusFoodPelletController::generateX()
 {
 	int initialX = 0.f;
-	initialX = FMath::RandRange(-7, 7);
-	// we have a 3000px x 3000px playing field. since we want it to be 15x15, we must divide the field into 255 200px x 200px squares. -7 to 7 allows 15 squares (including 0). this function generates the x coordinate
-	initialX = 200 * initialX;
+	initialX = FMath::RandRange(0, FieldData::get().grid_size - 1);
 	return initialX;
 }
 
@@ -25,8 +23,7 @@ int ABonusFoodPelletController::generateY()
 {
 	//same as generateX(), but for the y coordinate
 	int initialY = 0.f;
-	initialY = FMath::RandRange(-7, 7);
-	initialY = 200 * initialY;
+	initialY = FMath::RandRange(0, FieldData::get().grid_size - 1);
 	return initialY;
 }
 
@@ -35,22 +32,20 @@ void ABonusFoodPelletController::bonusFoodPelletSpawnerFunction()
 	//begins by getting GameInstance so that the location can be added
   FieldData &fieldData = FieldData::get();
 
-	//generates vector for spawning
-	spawnLocation.X = generateX();
-	spawnLocation.Y = generateY();
-	spawnLocation.Z = 0.f;
-
-	int arrayLocationX = spawnLocation.X / 200 + 7;
-	int arrayLocationY = spawnLocation.Y / 200 + 7;
+	int arrayLocationX = generateX();
+	int arrayLocationY = generateY();
 	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	
-  fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::PELLET;
+  fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::BONUS_PELLET;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;
 	spawnParams.Owner = this;
 	spawnParams.Instigator = Instigator;
+  FVector spawnLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
 	ABonusFoodPellet* newBonusFoodPellet = GetWorld()->SpawnActor<ABonusFoodPellet>(spawningObject, spawnLocation, FRotator::ZeroRotator, spawnParams);
+
+  fieldData.cells[arrayLocationX][arrayLocationY].set_object(newBonusFoodPellet);
 }
 
 void ABonusFoodPelletController::bonusFoodPelletGenerator()

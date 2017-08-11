@@ -20,8 +20,6 @@ public:
 
 	int generateY();		//Generates random y coordinate
 
-	FVector spawnLocation;	//location of bonus pellet's spawn
-
 	void bonusFoodPelletSpawnerFunction(); //this function spawns the walls based on a desired location. it is referenced by generateInXDirection() and generateInYDirection()
 
 	void bonusFoodPelletGenerator();	// this function is the main generator that is referenced in BeginPlay(). it calls generateInXDirection() and generateInYDirection() a random number of times to ensure a random placement of walls is made

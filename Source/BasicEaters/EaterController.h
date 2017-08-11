@@ -20,8 +20,6 @@ public:
 
 	int generateY();		//Generates random y coordinate
 
-	FVector spawnLocation;
-
 	void eaterSpawnerFunction(int xLocation, int yLocation);
 
 	UPROPERTY(EditDefaultsOnly, Category = "Spawning Object")

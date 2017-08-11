@@ -19,8 +19,6 @@ public:
 
 	int generateY();
 
-	FVector spawnLocation;
-
 	void eaterSpawnerFunction(int xLocation, int yLocation);
 
 	UFUNCTION()

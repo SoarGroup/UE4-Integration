@@ -16,8 +16,6 @@ public:
 	// Sets default values for this actor's properties
 	ANormalFoodPelletController();
 
-	FVector spawnLocation;
-
 	void normalFoodPelletSpawnerFunction(int xLocation, int yLocation);
 
 	void normalFoodPelletGenerator();

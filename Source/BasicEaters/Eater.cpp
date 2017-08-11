@@ -14,29 +14,21 @@ AEater::AEater()
 int AEater::generateX()
 {
 	int initialX = 0.f;
-	initialX = FMath::RandRange(-7, 7);
-	// we have a 3000px x 3000px playing field. since we want it to be 15x15, we must divide the field into 255 200px x 200px squares. -7 to 7 allows 15 squares (including 0). this function generates the x coordinate
-	initialX = 200 * initialX;
+	initialX = FMath::RandRange(0, FieldData::get().grid_size - 1);
 	return initialX;
 }
 
 int AEater::generateY()
 {
 	int initialY = 0.f;
-	initialY = FMath::RandRange(-7, 7);
-	initialY = 200 * initialY;
+	initialY = FMath::RandRange(0, FieldData::get().grid_size - 1);
 	return initialY;
 }
 
-void AEater::eaterSpawnerFunction(int xLocation, int yLocation)
+void AEater::eaterSpawnerFunction(int arrayLocationX, int arrayLocationY)
 {
 	//begins by getting GameInstance so that the location can be added
   FieldData &fieldData = FieldData::get();
-
-	//generates vector for spawning
-	spawnLocation.X = xLocation;
-	spawnLocation.Y = yLocation;
-	spawnLocation.Z = 0.f;
 
 	//adds the location of the wall to a global array found in GameInstance in the format of "[object identifier][xlocation][ylocation]". Z location is superfluous because it is constant for all actors
 	//"w" identifier is for wall, "e" for eater, "n" for normal food pellet, "b" for bonus food pellet
@@ -44,9 +36,7 @@ void AEater::eaterSpawnerFunction(int xLocation, int yLocation)
 	//FString arrayLocation = FString(TEXT("w") + FString::FromInt(xLocation) + FString::FromInt(yLocation));
 	//FDGI->FieldData.Add(arrayLocation);
 
-	int arrayLocationX = spawnLocation.X / 200 + 7;
-	int arrayLocationY = spawnLocation.Y / 200 + 7;
-	UE_LOG(LogTemp, Log, TEXT("Made it to while"));
+	//UE_LOG(LogTemp, Log, TEXT("Made it to while"));
 	/*while (FDGI->FieldData[arrayIndex] != "n") {
 
 	spawnLocation.X = generateX();
@@ -56,7 +46,10 @@ void AEater::eaterSpawnerFunction(int xLocation, int yLocation)
 	arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	}*/
   fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
+  fieldData.cells[arrayLocationX][arrayLocationY].clear_object();
+  fieldData.eater_pos = std::make_pair(arrayLocationX, arrayLocationY);
 
+  FVector spawnLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
 	SetActorLocation(spawnLocation, false);
 }
 
@@ -69,12 +62,17 @@ void AEater::MoveUp(float value)
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 		
-		actorLocation.X += 200;
-    int arrayLocationX = actorLocation.X / 200 + 7;
-    int arrayLocationY = actorLocation.Y / 200 + 7;
-		if ((actorLocation.X != 1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    int arrayLocationX = fieldData.eater_pos.first;
+    int arrayLocationY = fieldData.eater_pos.second + 1;
+		if (arrayLocationY != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
+      fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
+      fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
+      fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
+      fieldData.eater_pos.first = arrayLocationX;
+      fieldData.eater_pos.second = arrayLocationY;
+      FVector actorLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
 			SetActorLocation(actorLocation, false);
 		}
 	}
@@ -90,13 +88,18 @@ void AEater::MoveDown(float value)
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
-		actorLocation.X -= 200;
-    int arrayLocationX = actorLocation.X / 200 + 7;
-    int arrayLocationY = actorLocation.Y / 200 + 7;
-		if ((actorLocation.X != -1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    int arrayLocationX = fieldData.eater_pos.first;
+    int arrayLocationY = fieldData.eater_pos.second - 1;
+    if (arrayLocationY != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving Down!!"));
-			SetActorLocation(actorLocation, false);
+			UE_LOG(LogTemp, Log, TEXT("Still Moving DOWN!!"));
+      fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
+      fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
+      fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
+      fieldData.eater_pos.first = arrayLocationX;
+      fieldData.eater_pos.second = arrayLocationY;
+      FVector actorLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
+      SetActorLocation(actorLocation, false);
 		}
 	}
 }
@@ -110,14 +113,19 @@ void AEater::MoveLeft(float value)
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
-		actorLocation.Y -= 200;
-    int arrayLocationX = actorLocation.X / 200 + 7;
-    int arrayLocationY = actorLocation.Y / 200 + 7;
-		if ((actorLocation.Y != -1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
-		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving Left!!"));
-			SetActorLocation(actorLocation, false);
-		}
+    int arrayLocationX = fieldData.eater_pos.first - 1;
+    int arrayLocationY = fieldData.eater_pos.second;
+    if (arrayLocationX != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    {
+      UE_LOG(LogTemp, Log, TEXT("Still Moving LEFT!!"));
+      fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
+      fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
+      fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
+      fieldData.eater_pos.first = arrayLocationX;
+      fieldData.eater_pos.second = arrayLocationY;
+      FVector actorLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
+      SetActorLocation(actorLocation, false);
+    }
 	}
 }
 
@@ -128,14 +136,19 @@ void AEater::MoveRight(float value)
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
-		actorLocation.Y += 200;
-    int arrayLocationX = actorLocation.X / 200 + 7;
-    int arrayLocationY = actorLocation.Y / 200 + 7;
-		if ((actorLocation.Y != 1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
-		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving Left!!"));
-			SetActorLocation(actorLocation, false);
-		}
+    int arrayLocationX = fieldData.eater_pos.first + 1;
+    int arrayLocationY = fieldData.eater_pos.second;
+    if (arrayLocationX != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
+    {
+      UE_LOG(LogTemp, Log, TEXT("Still Moving RIGHT!!"));
+      fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
+      fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
+      fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
+      fieldData.eater_pos.first = arrayLocationX;
+      fieldData.eater_pos.second = arrayLocationY;
+      FVector actorLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
+      SetActorLocation(actorLocation, false);
+    }
 	}
 }
 
@@ -157,9 +170,9 @@ void AEater::Tick(float DeltaTime)
 void AEater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	PlayerInputComponent->BindAxis("MoveUp", this, &AEater::MoveUp);
-	PlayerInputComponent->BindAxis("MoveDown", this, &AEater::MoveDown);
-	PlayerInputComponent->BindAxis("MoveLeft", this, &AEater::MoveLeft);
-	PlayerInputComponent->BindAxis("MoveRight", this, &AEater::MoveRight);
+	PlayerInputComponent->BindAxis("MoveRight", this, &AEater::MoveUp);
+	PlayerInputComponent->BindAxis("MoveLeft", this, &AEater::MoveDown);
+	PlayerInputComponent->BindAxis("MoveDown", this, &AEater::MoveLeft);
+	PlayerInputComponent->BindAxis("MoveUp", this, &AEater::MoveRight);
 
 }

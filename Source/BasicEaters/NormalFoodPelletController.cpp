@@ -28,19 +28,10 @@ void ANormalFoodPelletController::BeginPlay()
 
 
 
-void ANormalFoodPelletController::normalFoodPelletSpawnerFunction(int xLocation, int yLocation)
+void ANormalFoodPelletController::normalFoodPelletSpawnerFunction(int arrayLocationX, int arrayLocationY)
 {
 	//begins by getting GameInstance so that the location can be added
   FieldData &fieldData = FieldData::get();
-
-	//generates vector for spawning
-	spawnLocation.X = xLocation;
-	spawnLocation.Y = yLocation;
-	spawnLocation.Z = 50;
-
-	int arrayLocationX = spawnLocation.X / 200 + 7;
-	int arrayLocationY = spawnLocation.Y / 200 + 7;
-	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
 
 	FString arrayObject = FString(TEXT("n"));
 	//FDGI->FieldData[arrayIndex] = arrayObject;
@@ -49,7 +40,10 @@ void ANormalFoodPelletController::normalFoodPelletSpawnerFunction(int xLocation,
 	FActorSpawnParameters spawnParams;
 	spawnParams.Owner = this;
 	spawnParams.Instigator = Instigator;
+  FVector spawnLocation(arrayLocationX * fieldData.render_scaling_factor, arrayLocationY * fieldData.render_scaling_factor, 0);
 	ANormalFoodPellet* newNormalFoodPellet = GetWorld()->SpawnActor<ANormalFoodPellet>(spawningObject, spawnLocation, FRotator::ZeroRotator, spawnParams);
+
+  fieldData.cells[arrayLocationX][arrayLocationY].set_object(newNormalFoodPellet);
 }
 
 void ANormalFoodPelletController::normalFoodPelletGenerator()
@@ -58,7 +52,8 @@ void ANormalFoodPelletController::normalFoodPelletGenerator()
 
   for (int i = 0; i != FieldData::grid_size; ++i) {
     for (int j = 0; j != FieldData::grid_size; ++j) {
-  		normalFoodPelletSpawnerFunction(200*(i-7), 200*(j-7));
+      if(fieldData.cells[i][j].item == FieldData::Item::PELLET)
+    		normalFoodPelletSpawnerFunction(i, j);
     }
   }
 	

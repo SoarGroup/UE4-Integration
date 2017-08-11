@@ -21,8 +21,6 @@ public:
 
 	int generateY();		//Generates random y coordinate
 
-	FVector spawnLocation;	//location of wall's spawn
-
 	void wallSpawnerFunction(int xLocation, int yLocation); //this function spawns the walls based on a desired location. it is referenced by generateInXDirection() and generateInYDirection()
 
 	void generateInXDirection(int number);	//generates a certain number of walls in x direction based on the number parameter
