@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Eater.h"
-
+#include "FieldData.h"
 
 // Sets default values
 AEater::AEater()
@@ -31,7 +31,7 @@ int AEater::generateY()
 void AEater::eaterSpawnerFunction(int xLocation, int yLocation)
 {
 	//begins by getting GameInstance so that the location can be added
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+  FieldData &fieldData = FieldData::get();
 
 	//generates vector for spawning
 	spawnLocation.X = xLocation;
@@ -46,7 +46,6 @@ void AEater::eaterSpawnerFunction(int xLocation, int yLocation)
 
 	int arrayLocationX = spawnLocation.X / 200 + 7;
 	int arrayLocationY = spawnLocation.Y / 200 + 7;
-	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	UE_LOG(LogTemp, Log, TEXT("Made it to while"));
 	/*while (FDGI->FieldData[arrayIndex] != "n") {
 
@@ -56,8 +55,7 @@ void AEater::eaterSpawnerFunction(int xLocation, int yLocation)
 	arrayLocationY = spawnLocation.Y / 200 + 7;
 	arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	}*/
-	FString arrayObject = FString(TEXT("e"));
-	FDGI->FieldData[arrayIndex] = arrayObject;
+  fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
 
 	SetActorLocation(spawnLocation, false);
 }
@@ -66,13 +64,15 @@ void AEater::MoveUp(float value)
 {
 	if ((Controller != NULL) && (value != 0.0f))
 	{
+
 		UE_LOG(LogTemp, Log, TEXT("Up!"));
-		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+    FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 		
 		actorLocation.X += 200;
-		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 +7);
-		if ((actorLocation.X != 1600) && (FDGI->FieldData[arrayIndex] != "w"))
+    int arrayLocationX = actorLocation.X / 200 + 7;
+    int arrayLocationY = actorLocation.Y / 200 + 7;
+		if ((actorLocation.X != 1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
 			SetActorLocation(actorLocation, false);
@@ -87,12 +87,13 @@ void AEater::MoveDown(float value)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Down!"));
 
-		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+    FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
 		actorLocation.X -= 200;
-		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 + 7);
-		if ((actorLocation.X != -1600) && (FDGI->FieldData[arrayIndex] != "w"))
+    int arrayLocationX = actorLocation.X / 200 + 7;
+    int arrayLocationY = actorLocation.Y / 200 + 7;
+		if ((actorLocation.X != -1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving Down!!"));
 			SetActorLocation(actorLocation, false);
@@ -106,12 +107,13 @@ void AEater::MoveLeft(float value)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Left!"));
 
-		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+    FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
 		actorLocation.Y -= 200;
-		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 + 7);
-		if ((actorLocation.Y != -1600) && (FDGI->FieldData[arrayIndex] != "w"))
+    int arrayLocationX = actorLocation.X / 200 + 7;
+    int arrayLocationY = actorLocation.Y / 200 + 7;
+		if ((actorLocation.Y != -1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving Left!!"));
 			SetActorLocation(actorLocation, false);
@@ -123,14 +125,13 @@ void AEater::MoveRight(float value)
 {
 	if ((Controller != NULL) && (value != 0.0f))
 	{
-		
-
-		UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+    FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 
 		actorLocation.Y += 200;
-		int arrayIndex = 15 * (actorLocation.X / 200 + 7) + (actorLocation.Y / 200 + 7);
-		if ((actorLocation.Y != 1600) && (FDGI->FieldData[arrayIndex] != "w"))
+    int arrayLocationX = actorLocation.X / 200 + 7;
+    int arrayLocationY = actorLocation.Y / 200 + 7;
+		if ((actorLocation.Y != 1600) && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Still Moving Left!!"));
 			SetActorLocation(actorLocation, false);

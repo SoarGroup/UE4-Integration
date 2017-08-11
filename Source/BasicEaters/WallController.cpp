@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "WallController.h"
+#include "FieldData.h"
 
 
 // Sets default values
@@ -34,7 +35,7 @@ int AWallController::generateY()
 void AWallController::wallSpawnerFunction(int xLocation, int yLocation)
 {
 	//begins by getting GameInstance so that the location can be added
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+  FieldData &fieldData = FieldData::get();
 
 	//generates vector for spawning
 	spawnLocation.X = xLocation;
@@ -51,16 +52,7 @@ void AWallController::wallSpawnerFunction(int xLocation, int yLocation)
 	int arrayLocationY = spawnLocation.Y / 200 + 7;
 	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
 
-	while (FDGI->FieldData[arrayIndex] != "u") {
-		
-		spawnLocation.X = generateX();
-		spawnLocation.Y = generateY();
-		arrayLocationX = spawnLocation.X / 200 + 7;
-		arrayLocationY = spawnLocation.Y / 200 + 7;
-		arrayIndex = 15 * arrayLocationX + arrayLocationY;
-	}
-	FString arrayObject = FString(TEXT("w"));
-	FDGI->FieldData[arrayIndex] = arrayObject;
+  fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::WALL;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;
@@ -73,9 +65,6 @@ void AWallController::generateInXDirection(int number) {
 	//creates starting location for wall
 	int initialXLocation = generateX();
 	int initialYLocation = generateY();
-
-	//ensures correct number in a row
-	number = number - 1;
 
 	//creates the wall
 	wallSpawnerFunction(initialXLocation, initialYLocation);
@@ -161,10 +150,7 @@ void AWallController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//retrieves GameInstance to access array
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
 
-	
 	wallGenerator();
 	UE_LOG(LogTemp, Log, TEXT("WALL"));
 

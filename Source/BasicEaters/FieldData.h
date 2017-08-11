@@ -6,24 +6,28 @@ is able to access it to see what's on the playing field.
 */
 #pragma once
 
-#include "CoreMinimal.h"
-#include "Engine/GameInstance.h"
-#include "FieldData.generated.h"
+#include <array>
+#include <string>
 
-/**
-*
-*/
-UCLASS()
-class BASICEATERS_API UFieldData : public UGameInstance
+class FieldData
 {
-	GENERATED_BODY()
+private:
+  FieldData(const FieldData &);
+  FieldData & operator=(const FieldData &);
 
 public:
-	UFieldData(const FObjectInitializer& ObjectInitializer);
+  enum class Item { EMPTY, EATER, PELLET, WALL };
+  struct Cell {
+    std::pair<size_t, size_t> coord;
+    Item item = Item::PELLET;
+  };
 
+  FieldData();
 
-	//The following two lines define our array.
-	UPROPERTY(EditAnywhere, Category = FieldData)
-		TArray<FString> FieldData;
+  static FieldData & get();
 
+  static const size_t grid_size = 15;
+  static const int render_scaling_factor = 200;
+
+  std::array<std::array<Cell, grid_size>, grid_size> cells;
 };

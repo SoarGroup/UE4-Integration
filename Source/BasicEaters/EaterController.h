@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "FieldData.h"
 #include "Eater.h"
 #include "EaterController.generated.h"
 

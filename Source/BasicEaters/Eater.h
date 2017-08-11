@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "FieldData.h"
 #include "Eater.generated.h"
 
 UCLASS()

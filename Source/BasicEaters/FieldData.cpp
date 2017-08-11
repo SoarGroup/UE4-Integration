@@ -2,7 +2,14 @@
 
 #include "FieldData.h"
 
-UFieldData::UFieldData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
-{
-	FieldData.Init("u", 225);
+FieldData::FieldData() {
+  for(size_t i = 0; i != grid_size; ++i) {
+    for(size_t j = 0; j != grid_size; ++j)
+      cells[i][j].coord = std::make_pair(i, j);
+  }
+}
+
+FieldData & FieldData::get() {
+  static FieldData fieldData;
+  return fieldData;
 }

@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "EaterController.h"
+#include "FieldData.h"
 
 
 // Sets default values
@@ -31,7 +32,7 @@ int AEaterController::generateY()
 void AEaterController::eaterSpawnerFunction(int xLocation, int yLocation)
 {
 	//begins by getting GameInstance so that the location can be added
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+  FieldData &fieldData = FieldData::get();
 
 	//generates vector for spawning
 	spawnLocation.X = xLocation;
@@ -56,8 +57,7 @@ void AEaterController::eaterSpawnerFunction(int xLocation, int yLocation)
 		arrayLocationY = spawnLocation.Y / 200 + 7;
 		arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	}*/
-	FString arrayObject = FString(TEXT("e"));
-	FDGI->FieldData[arrayIndex] = arrayObject;
+  fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EMPTY;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;

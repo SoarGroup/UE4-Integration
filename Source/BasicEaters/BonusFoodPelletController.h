@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "FieldData.h"
 #include "BonusFoodPellet.h"
 #include "BonusFoodPelletController.generated.h"
 

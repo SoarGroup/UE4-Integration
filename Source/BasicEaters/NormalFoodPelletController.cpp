@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "NormalFoodPelletController.h"
+#include "FieldData.h"
 
 
 // Sets default values
@@ -30,7 +31,7 @@ void ANormalFoodPelletController::BeginPlay()
 void ANormalFoodPelletController::normalFoodPelletSpawnerFunction(int xLocation, int yLocation)
 {
 	//begins by getting GameInstance so that the location can be added
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+  FieldData &fieldData = FieldData::get();
 
 	//generates vector for spawning
 	spawnLocation.X = xLocation;
@@ -53,15 +54,13 @@ void ANormalFoodPelletController::normalFoodPelletSpawnerFunction(int xLocation,
 
 void ANormalFoodPelletController::normalFoodPelletGenerator()
 {
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
-	for (int i = 0; i < FDGI->FieldData.Num(); i++)
-	{
-		if (FDGI->FieldData[i] == "u")
-		{
-			normalFoodPelletSpawnerFunction( (200*(((i-(i%15))/15)-7)),(200*((i%15)-7)));
-			
-		}
-	}
+  FieldData &fieldData = FieldData::get();
+
+  for (int i = 0; i != FieldData::grid_size; ++i) {
+    for (int j = 0; j != FieldData::grid_size; ++j) {
+  		normalFoodPelletSpawnerFunction(200*(i-7), 200*(j-7));
+    }
+  }
 	
 }
 

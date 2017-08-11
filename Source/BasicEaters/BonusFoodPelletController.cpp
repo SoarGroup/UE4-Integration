@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BonusFoodPelletController.h"
+#include "FieldData.h"
 
 
 // Sets default values
@@ -32,7 +33,7 @@ int ABonusFoodPelletController::generateY()
 void ABonusFoodPelletController::bonusFoodPelletSpawnerFunction()
 {
 	//begins by getting GameInstance so that the location can be added
-	UFieldData* FDGI = Cast<UFieldData>(GetGameInstance());
+  FieldData &fieldData = FieldData::get();
 
 	//generates vector for spawning
 	spawnLocation.X = generateX();
@@ -43,15 +44,7 @@ void ABonusFoodPelletController::bonusFoodPelletSpawnerFunction()
 	int arrayLocationY = spawnLocation.Y / 200 + 7;
 	int arrayIndex = 15 * arrayLocationX + arrayLocationY;
 	
-	while (FDGI->FieldData[arrayIndex] != "u") {
-		spawnLocation.X = generateX();
-		spawnLocation.Y = generateY();
-		arrayLocationX = spawnLocation.X / 200 + 7;
-		arrayLocationY = spawnLocation.Y / 200 + 7;
-		arrayIndex = 15 * arrayLocationX + arrayLocationY;
-	}
-	FString arrayObject = FString(TEXT("b"));
-	FDGI->FieldData[arrayIndex] = arrayObject;
+  fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::PELLET;
 
 	//creates the parameters for spawning based off of Unreal Documentation guidelines
 	FActorSpawnParameters spawnParams;
