@@ -24,7 +24,10 @@ void ANormalFoodPelletController::BeginPlay()
 	
 }
 
-
+void ANormalFoodPelletController::EndPlay(const EEndPlayReason::Type endPlayReasonType) {
+  FieldData &fieldData = FieldData::get();
+  fieldData.reset();
+}
 
 
 

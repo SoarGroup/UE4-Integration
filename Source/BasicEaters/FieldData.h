@@ -25,8 +25,8 @@ public:
     Item item = Item::PELLET;
 
     void clear_object() {
-      /// TODO
-      //unrealObject->Destroy();
+      if(unrealObject)
+        unrealObject->Destroy();
       unrealObject = nullptr;
     }
 
