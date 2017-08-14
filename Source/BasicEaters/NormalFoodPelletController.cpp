@@ -55,8 +55,8 @@ void ANormalFoodPelletController::normalFoodPelletGenerator()
 
   for (int i = 0; i != FieldData::grid_size; ++i) {
     for (int j = 0; j != FieldData::grid_size; ++j) {
-      fieldData.cells[i][j].item = FieldData::Item::PELLET;
-   		normalFoodPelletSpawnerFunction(i, j);
+      if(fieldData.cells[i][j].item == FieldData::Item::PELLET)
+     		normalFoodPelletSpawnerFunction(i, j);
     }
   }
 	
