@@ -21,3 +21,26 @@ void FieldData::reset() {
   eater_pos = std::pair<int, int>();
   eater_score = 0;
 }
+
+void FieldData::increaseScore(int amount)
+{
+	eater_score += amount;
+}
+
+int FieldData::getScore()
+{
+	return eater_score;
+}
+
+void FieldData::resetScore()
+{
+	eater_score = 0;
+}
+
+
+
+
+
+
+
+

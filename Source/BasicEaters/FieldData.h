@@ -52,6 +52,11 @@ public:
   static FieldData & get();
 
   void reset();
+  void increaseScore(int amount);
+  int getScore();
+  void resetScore();
+
+
 
   static const size_t grid_size = 15;
   static const int render_scaling_factor = 200;

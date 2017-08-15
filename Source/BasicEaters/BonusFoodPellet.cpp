@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BonusFoodPellet.h"
-
+#include "FieldData.h"
 
 // Sets default values
 ABonusFoodPellet::ABonusFoodPellet()
@@ -23,5 +23,15 @@ void ABonusFoodPellet::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ABonusFoodPellet::Destroyed()
+{
+	UE_LOG(LogTemp, Log, TEXT("Delete"));
+
+	FieldData &fieldData = FieldData::get();
+	fieldData.increaseScore(5);
+
+	UE_LOG(LogTemp, Log, TEXT("%d"), fieldData.getScore());
 }
 

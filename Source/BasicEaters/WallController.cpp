@@ -124,7 +124,8 @@ void AWallController::BeginPlay()
 
 
 	wallGenerator();
-	UE_LOG(LogTemp, Log, TEXT("WALL"));
+	FieldData &fieldData = FieldData::get();
+	fieldData.resetScore();
 
 
 }

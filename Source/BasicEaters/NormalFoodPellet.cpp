@@ -2,6 +2,7 @@
 
 #include "NormalFoodPellet.h"
 #include "Eater.h"
+#include "FieldData.h"
 
 // Sets default values
 ANormalFoodPellet::ANormalFoodPellet(const FObjectInitializer& objectInitializer)
@@ -45,5 +46,15 @@ void ANormalFoodPellet::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ANormalFoodPellet::Destroyed()
+{
+	UE_LOG(LogTemp, Log, TEXT("Delete"));
+	
+	FieldData &fieldData = FieldData::get();
+	fieldData.increaseScore(1);
+	
+	UE_LOG(LogTemp, Log, TEXT("%d"), fieldData.getScore());
 }
 

@@ -57,8 +57,6 @@ void AEater::MoveUp()
 {
 	if (Controller != NULL)
 	{
-
-		UE_LOG(LogTemp, Log, TEXT("Up!"));
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
 		
@@ -66,7 +64,6 @@ void AEater::MoveUp()
     int arrayLocationY = fieldData.eater_pos.second;
 		if (arrayLocationX != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving UP!!"));
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
       fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
       fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
@@ -83,7 +80,6 @@ void AEater::MoveDown()
 {
 	if (Controller != NULL)
 	{
-		UE_LOG(LogTemp, Log, TEXT("Down!"));
 
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
@@ -92,7 +88,7 @@ void AEater::MoveDown()
     int arrayLocationY = fieldData.eater_pos.second;
     if (arrayLocationX != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
 		{
-			UE_LOG(LogTemp, Log, TEXT("Still Moving DOWN!!"));
+
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
       fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
       fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
@@ -108,7 +104,7 @@ void AEater::MoveLeft()
 {
 	if (Controller != NULL)
 	{
-		UE_LOG(LogTemp, Log, TEXT("Left!"));
+
 
     FieldData &fieldData = FieldData::get();
 		FVector actorLocation = GetActorLocation();
@@ -117,7 +113,7 @@ void AEater::MoveLeft()
     int arrayLocationY = fieldData.eater_pos.second - 1;
     if (arrayLocationY != -1 && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
     {
-      UE_LOG(LogTemp, Log, TEXT("Still Moving LEFT!!"));
+ 
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
       fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
       fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
@@ -140,7 +136,7 @@ void AEater::MoveRight()
     int arrayLocationY = fieldData.eater_pos.second + 1;
     if (arrayLocationY != fieldData.grid_size && (fieldData.cells[arrayLocationX][arrayLocationY].item != FieldData::Item::WALL))
     {
-      UE_LOG(LogTemp, Log, TEXT("Still Moving RIGHT!!"));
+
       fieldData.cells[arrayLocationX][arrayLocationY].take_object(fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second]);
       fieldData.cells[arrayLocationX][arrayLocationY].item = FieldData::Item::EATER;
       fieldData.cells[fieldData.eater_pos.first][fieldData.eater_pos.second].item = FieldData::Item::EMPTY;
